@@ -1218,8 +1218,8 @@ new_rule_mcp:
   enabled: false
   id: ru_29e3c628-2e69-46c8-9f10-f1b67226d55d
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_29e3c628-2e69-46c8-9f10-f1b67226d55d
-  revision_create_time: '2025-05-08T23:19:27.539631Z'
-  revision_id: v_1746746367_539631000
+  revision_create_time: '2025-05-15T23:48:13.757135Z'
+  revision_id: v_1747352893_757135000
   run_frequency: HOURLY
   type: MULTI_EVENT
 o365_ADPowerShell_app_login_subsequent_activity:
