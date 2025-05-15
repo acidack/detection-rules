@@ -1,6 +1,6 @@
 rule win_repeatedAuthFailure_thenSuccess {
   meta:
-    author = "Chronicle Security"
+    author = "Chronicle Security "
     description = "Detect repeated authentication failure, followed by authentication success."
     severity = "Low"
 
