@@ -79,6 +79,7 @@ rule new_rule_mcp {
     $principal_ip = array_distinct($login.principal.ip)
     //$principal_user_userid = array_distinct($other.principal.user.userid)
     $target_resource_name = array_distinct($other.target.resource.name)
+    $outcome_comment = "test"
 
   condition:
     $login and #other_event > 0
