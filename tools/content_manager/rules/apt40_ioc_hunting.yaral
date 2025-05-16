@@ -1,0 +1,91 @@
+rule apt40_ioc_hunting {
+  meta:
+    author = "Cline"
+    description = "Detection rule for hunting APT40 IOCs using the 'apt40_iocs' reference list. Includes common MITRE ATT&CK TTPs associated with APT40."
+    severity = "HIGH" // Or perhaps MEDIUM for hunting, user can adjust
+    // Rule created: 2025-05-16
+    // Threat Actor: APT40 (Leviathan, Bronze Mohawk, TEMP.Periscope, etc.)
+    // Depends on reference list: apt40_iocs
+
+  events:
+    // Match events where relevant UDM fields contain indicators from the 'apt40_iocs' reference list.
+    // This list should contain various types of IOCs (IPs, domains, hashes, URLs).
+    (
+      $ioc.principal.ip IN %apt40_iocs or
+      $ioc.target.ip IN %apt40_iocs or
+      $ioc.src.ip IN %apt40_iocs or // For network events specifically
+      $ioc.observer.ip IN %apt40_iocs or // For network events specifically
+      $ioc.intermediary.ip IN %apt40_iocs or // For network events specifically
+      $ioc.target.domain.name IN %apt40_iocs or
+      $ioc.target.url IN %apt40_iocs or
+      $ioc.target.file.sha256 IN %apt40_iocs or
+      $ioc.target.file.md5 IN %apt40_iocs or
+      $ioc.target.file.full_path IN %apt40_iocs or // If list contains suspicious paths
+      $ioc.principal.process.file.sha256 IN %apt40_iocs or
+      $ioc.principal.process.file.md5 IN %apt40_iocs or
+      $ioc.src.process.file.sha256 IN %apt40_iocs or // For process events
+      $ioc.src.process.file.md5 IN %apt40_iocs or // For process events
+      $ioc.target.process.file.sha256 IN %apt40_iocs or // For process events
+      $ioc.target.process.file.md5 IN %apt40_iocs // For process events
+    )
+
+  condition:
+    $ioc
+
+  outcome:
+    $risk_score = 85 // Or perhaps lower for hunting, e.g., 60-70. User can adjust.
+    $threat_actor_name = "APT40"
+    $threat_actor_aliases = "Leviathan, Bronze Mohawk, TEMP.Periscope, NanHaiShu, TA423, G0065"
+
+    // Common MITRE ATT&CK TTPs for APT40 (Selected examples)
+    // Initial Access
+    $mitre_tactic_id_01 = "TA0001"
+    $mitre_tactic_name_01 = "Initial Access"
+    $mitre_technique_id_01a = "T1190"
+    $mitre_technique_name_01a = "Exploit Public-Facing Application"
+    $mitre_technique_id_01b = "T1566"
+    $mitre_technique_name_01b = "Phishing"
+
+    // Execution
+    $mitre_tactic_id_02 = "TA0002"
+    $mitre_tactic_name_02 = "Execution"
+    $mitre_technique_id_02a = "T1059"
+    $mitre_technique_name_02a = "Command and Scripting Interpreter"
+    $mitre_technique_id_02b = "T1047"
+    $mitre_technique_name_02b = "Windows Management Instrumentation"
+
+    // Persistence
+    $mitre_tactic_id_03 = "TA0003"
+    $mitre_tactic_name_03 = "Persistence"
+    $mitre_technique_id_03a = "T1547"
+    $mitre_technique_name_03a = "Boot or Logon Autostart Execution"
+    $mitre_technique_id_03b = "T1053"
+    $mitre_technique_name_03b = "Scheduled Task/Job"
+
+    // Defense Evasion
+    $mitre_tactic_id_04 = "TA0005"
+    $mitre_tactic_name_04 = "Defense Evasion"
+    $mitre_technique_id_04a = "T1027"
+    $mitre_technique_name_04a = "Obfuscated Files or Information"
+    $mitre_technique_id_04b = "T1218"
+    $mitre_technique_name_04b = "System Binary Proxy Execution"
+
+    // Command and Control
+    $mitre_tactic_id_05 = "TA0011"
+    $mitre_tactic_name_05 = "Command and Control"
+    $mitre_technique_id_05a = "T1071"
+    $mitre_technique_name_05a = "Application Layer Protocol" // (e.g., Web Service T1102)
+    $mitre_technique_id_05b = "T1573"
+    $mitre_technique_name_05b = "Encrypted Channel"
+
+    // Collection
+    $mitre_tactic_id_06 = "TA0009"
+    $mitre_tactic_name_06 = "Collection"
+    $mitre_technique_id_06a = "T1113"
+    $mitre_technique_name_06a = "Screen Capture"
+    $mitre_technique_id_06b = "T1560"
+    $mitre_technique_name_06b = "Archive Collected Data"
+
+    // Note: The threat intelligence provided a more extensive list of TTPs.
+    // This rule includes a selection for brevity.
+}

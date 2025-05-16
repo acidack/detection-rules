@@ -2086,3 +2086,15 @@ wmic_ntds_dit_T1003_003_cisa_report:
   revision_id: v_1744936965_873583000
   run_frequency: LIVE
   type: SINGLE_EVENT
+apt40_ioc_hunting:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2025-05-16T02:30:00.000000Z'
+  enabled: true
+  id: ru_a40a40a4-0a40-4a40-a40a-a40a40a40a40
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_a40a40a4-0a40-4a40-a40a-a40a40a40a40
+  revision_create_time: '2025-05-16T02:30:00.000000Z'
+  revision_id: v_1747377000_000000000
+  run_frequency: HOURLY
+  type: MULTI_EVENT
