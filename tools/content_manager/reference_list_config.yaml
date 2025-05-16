@@ -5,3 +5,6 @@ example_list_1:
   rule_associations_count: null
   rules: null
   syntax_type: REFERENCE_LIST_SYNTAX_TYPE_PLAIN_TEXT_STRING
+apt40_iocs:
+  description: IoCs related to APT40
+  syntax_type: REFERENCE_LIST_SYNTAX_TYPE_PLAIN_TEXT_STRING
