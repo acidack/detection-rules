@@ -73,39 +73,18 @@ jobs:
       - name: Run git status command
         run: git status  # For debugging
 
+      - name: Cleanup credential files
+        run: rm -f gha-creds-*.json
+
       - name: Commit pending changes
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Construct the authenticated URL for both pull and push
-          REPO_URL: "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Check if there are uncommitted changes based on the 'git add' step's success
-          # It's often better to run 'git add' within this script or ensure it has run.
-          # For this example, we assume files were added in a previous step and 'git status --porcelain' checks for staged changes.
-          
+          # Check if there are uncommitted changes
           if [[ -n $(git status --porcelain) ]]; then
-            echo "Changes detected. Committing..."
             git commit -m "latest content pulled from google secops api"
-
-            echo "Pulling latest changes from remote main with rebase..."
-            # Using -X theirs for auto-resolving conflicts if any, favoring remote changes for this type of bot commit.
-            # Or, for a simpler rebase that will fail on conflict:
-            # git pull --rebase ${{ env.REPO_URL }} main
-            # For a more robust attempt that tries to auto-resolve simple conflicts by preferring remote changes:
-            git pull --rebase -X theirs ${{ env.REPO_URL }} main
-            
-            # If the rebase fails due to complex conflicts, the script will exit here.
-            # You might need a more sophisticated conflict resolution strategy for true automation,
-            # but for many cases, this is sufficient or failure is an acceptable signal to investigate.
-
-            echo "Pushing changes to remote main..."
-            git push ${{ env.REPO_URL }} main:main
+            git push origin main
           else
             echo "No changes to commit"
           fi
-
-      - name: Show last git commit message
-        run: git log -1  # For debugging
+      
+            - name: Show last git commit message
+              run: git log -1  # For debugging
