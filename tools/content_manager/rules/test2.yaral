@@ -34,6 +34,7 @@ rule test2 {
     $event_count = count_distinct($process.metadata.id)
     $mitre_attack_tactic = array("TA0002") // Execution
     $mitre_attack_technique = array("T1204.002") // User Execution: Malicious File
+    // test
   
   condition:
     $process and $ioc
