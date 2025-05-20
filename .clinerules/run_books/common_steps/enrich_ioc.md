@@ -47,7 +47,7 @@ sequenceDiagram
     participant GTI as gti-mcp
     participant SIEM as secops-mcp
 
-    CallingRunbook->>EnrichIOC: Execute Enrichment\\nInput: IOC_VALUE, IOC_TYPE
+    CallingRunbook->>EnrichIOC: Execute Enrichment\nInput: IOC_VALUE, IOC_TYPE
 
     %% Step 2: GTI Enrichment
     alt IOC_TYPE is IP Address
@@ -74,7 +74,7 @@ sequenceDiagram
     Note over EnrichIOC: Check if IOC_VALUE is in list. Set SIEM_IOC_MATCH_STATUS (Yes/No).
 
     %% Step 5: Return Results
-    EnrichIOC-->>CallingRunbook: Return Results:\\nGTI_FINDINGS,\\nSIEM_ENTITY_SUMMARY,\\nSIEM_IOC_MATCH_STATUS
+    EnrichIOC-->>CallingRunbook: Return Results:\nGTI_FINDINGS,\nSIEM_ENTITY_SUMMARY,\nSIEM_IOC_MATCH_STATUS
 
 ```
 

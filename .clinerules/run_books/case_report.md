@@ -11,8 +11,8 @@
 ## Inputs
 
 *   `${CASE_ID}`: The SOAR case ID for which the report is being generated.
-*   *(Optional) `${REPORT_FILENAME_SUFFIX}`: A suffix for the report filename.*\
-*   *(Optional) `${ADDITIONAL_CONTEXT}`: Any specific points or findings the analyst wants to ensure are included.*\
+*   *(Optional) `${REPORT_FILENAME_SUFFIX}`: A suffix for the report filename.*
+*   *(Optional) `${ADDITIONAL_CONTEXT}`: Any specific points or findings the analyst wants to ensure are included.*
 
 ## Tools
 
@@ -39,7 +39,7 @@ sequenceDiagram
     participant SIEM as secops-mcp %% Example servers used during investigation
     participant GTI as gti-mcp  %% Example servers used during investigation
 
-    Analyst/User->>Cline: Generate Case Report\\nInput: CASE_ID, ...
+    Analyst/User->>Cline: Generate Case Report\nInput: CASE_ID, ...
 
     %% Step 1: Gather Case Data
     Cline->>SOAR: get_case_full_details(case_id=CASE_ID)

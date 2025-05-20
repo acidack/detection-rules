@@ -11,7 +11,7 @@ This sub-runbook executes the appropriate `gti-mcp.get_entities_related_to_a_...
 ## Inputs
 
 *   `${IOC_VALUE}`: The specific IOC value (e.g., "198.51.100.10", "evil-domain.com", "abcdef123456...", "http://bad.url/path").
-*   `${IOC_TYPE}`: The type of IOC ("IP Address", "Domain", "File Hash", "URL", "Collection"). *Note: Added "Collection" type.*\
+*   `${IOC_TYPE}`: The type of IOC ("IP Address", "Domain", "File Hash", "URL", "Collection"). *Note: Added "Collection" type.*
 *   `${RELATIONSHIP_NAMES}`: A list of relationship names to query (e.g., ["resolutions", "communicating_files"], ["malware_families", "attack_techniques"]). The available relationships depend on the `${IOC_TYPE}`.
 
 ## Outputs
@@ -38,7 +38,7 @@ sequenceDiagram
     participant PivotOnIOC as pivot_on_ioc_gti.md (This Runbook)
     participant GTI as gti-mcp
 
-    CallingRunbook->>PivotOnIOC: Execute GTI Pivot\\nInput: IOC_VALUE, IOC_TYPE, RELATIONSHIP_NAMES
+    CallingRunbook->>PivotOnIOC: Execute GTI Pivot\nInput: IOC_VALUE, IOC_TYPE, RELATIONSHIP_NAMES
 
     %% Step 2: Determine Tool
     Note over PivotOnIOC: Select GTI tool based on IOC_TYPE
@@ -52,7 +52,7 @@ sequenceDiagram
 
     %% Step 4: Return Results
     Note over PivotOnIOC: Set PIVOT_STATUS
-    PivotOnIOC-->>CallingRunbook: Return Results:\\nRELATED_ENTITIES,\\nPIVOT_STATUS
+    PivotOnIOC-->>CallingRunbook: Return Results:\nRELATED_ENTITIES,\nPIVOT_STATUS
 
 ```
 

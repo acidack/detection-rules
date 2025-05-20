@@ -43,7 +43,7 @@ sequenceDiagram
     participant SIEM as secops-mcp
     participant SOAR as secops-soar
 
-    Researcher->>Cline: Research Threat Actor\\nInput: THREAT_ACTOR_ID
+    Researcher->>Cline: Research Threat Actor\nInput: THREAT_ACTOR_ID
 
     %% Step 2: Initial GTI Lookup
     Cline->>GTI: get_collection_report(id=THREAT_ACTOR_ID)

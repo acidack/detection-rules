@@ -13,7 +13,7 @@ This sub-runbook executes the `write_to_file` action. It assumes the report cont
 *   `${REPORT_CONTENT}`: The full content of the report (usually Markdown text).
 *   `${REPORT_TYPE}`: A short identifier for the type of report (e.g., "alert_report", "ioc_enrichment", "hunt_summary").
 *   `${REPORT_NAME_SUFFIX}`: A descriptive suffix for the report name (e.g., the Case ID, IOC value, hunt name).
-*   *(Optional) `${TARGET_DIRECTORY}`: The directory to save the report in (defaults to `./reports/`).*\
+*   *(Optional) `${TARGET_DIRECTORY}`: The directory to save the report in (defaults to `./reports/`).*
 
 ## Outputs
 
@@ -39,17 +39,17 @@ sequenceDiagram
     participant CallingRunbook
     participant GenerateReportFile as generate_report_file.md (This Runbook)
 
-    CallingRunbook->>GenerateReportFile: Execute Report Generation\\nInput: REPORT_CONTENT, REPORT_TYPE, REPORT_NAME_SUFFIX, TARGET_DIRECTORY (opt)
+    CallingRunbook->>GenerateReportFile: Execute Report Generation\nInput: REPORT_CONTENT, REPORT_TYPE, REPORT_NAME_SUFFIX, TARGET_DIRECTORY (opt)
 
     %% Step 2: Construct Filename
-    Note over GenerateReportFile: Generate TIMESTAMP\\nDetermine DIR\\nConstruct FILENAME (REPORT_FILE_PATH)
+    Note over GenerateReportFile: Generate TIMESTAMP\nDetermine DIR\nConstruct FILENAME (REPORT_FILE_PATH)
 
     %% Step 3: Write File
     GenerateReportFile->>GenerateReportFile: write_to_file(path=REPORT_FILE_PATH, content=REPORT_CONTENT)
     Note over GenerateReportFile: Store write status (WRITE_STATUS)
 
     %% Step 4: Return Status
-    GenerateReportFile-->>CallingRunbook: Return Results:\\nREPORT_FILE_PATH,\\nWRITE_STATUS
+    GenerateReportFile-->>CallingRunbook: Return Results:\nREPORT_FILE_PATH,\nWRITE_STATUS
 
 ```
 

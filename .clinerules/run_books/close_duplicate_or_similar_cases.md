@@ -37,3 +37,4 @@
       end
       Cline->>attempt_completion: attempt_completion(Summary of closed cases)
       Note right of Cline: Slack notification not possible due to tool limitations.
+```

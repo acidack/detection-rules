@@ -53,7 +53,7 @@ sequenceDiagram
     participant Recovery as Phase 5: Recovery
     participant LessonsLearned as Phase 6: Lessons Learned
 
-    Analyst->>IRP: Start Ransomware Response\\nInput: CASE_ID, ALERT_GROUP_IDS, INITIAL_INDICATORS
+    Analyst->>IRP: Start Ransomware Response\nInput: CASE_ID, ALERT_GROUP_IDS, INITIAL_INDICATORS
 
     IRP->>Preparation: Verify Prerequisites (Ongoing)
     Preparation-->>IRP: Readiness Confirmed (Backups, Tools, Plans)
@@ -98,7 +98,7 @@ sequenceDiagram
     2.  **Identify Ransomware Strain:**
         *   If a file hash (`${FILE_HASH}`) is available, use `gti-mcp.get_file_report` to identify the malware family/ransomware name.
         *   If EDR alert name or ransom note details provide a name, use `gti-mcp.search_threats` (e.g., `query="LockBit ransomware" collection_type:"malware-family"`) or `get_collection_report` if a specific GTI ID is known.
-        *   *(Manual Step: Use external resources like ID Ransomware if GTI doesn't yield results).*\
+        *   *(Manual Step: Use external resources like ID Ransomware if GTI doesn't yield results).*
         *   Document the identified (or suspected) strain (`IDENTIFIED_STRAIN`).
     3.  **Investigate Initial Access & Lateral Movement (SIEM):**
         *   Use `secops-mcp.search_security_events` focusing on the time *before* and *during* the initial encryption activity on the affected endpoints:
@@ -110,9 +110,9 @@ sequenceDiagram
     4.  **Initial Scope Assessment:**
         *   Combine initial indicators with findings from step 3 to create a list of initially identified affected endpoints (`AFFECTED_ENDPOINTS`) and potentially malicious network IOCs (`MALICIOUS_IOCs`).
     5.  **Check Related SOAR Cases:**
-        *   Prepare list of key entities: `SEARCH_TERMS = AFFECTED_ENDPOINTS + MALICIOUS_IOCs`.\
-        *   Execute `../common_steps/find_relevant_soar_case.md` with `SEARCH_TERMS` and `CASE_STATUS_FILTER="Opened"`.\
-        *   Obtain `${RELATED_SOAR_CASES}` (list of potentially relevant open case summaries/IDs).\
+        *   Prepare list of key entities: `SEARCH_TERMS = AFFECTED_ENDPOINTS + MALICIOUS_IOCs`.
+        *   Execute `../common_steps/find_relevant_soar_case.md` with `SEARCH_TERMS` and `CASE_STATUS_FILTER="Opened"`.
+        *   Obtain `${RELATED_SOAR_CASES}` (list of potentially relevant open case summaries/IDs).
     6.  **Document Identification Phase:**
         *   Document findings (`IDENTIFIED_STRAIN`, `INITIAL_ACCESS_VECTOR`, `AFFECTED_ENDPOINTS`, `MALICIOUS_IOCs`, `${RELATED_SOAR_CASES}`) using `../common_steps/document_in_soar.md`.
 
@@ -173,7 +173,7 @@ sequenceDiagram
 
 *   **Objective:** Review the incident and response to identify areas for improvement.
 *   **Sub-Runbooks/Steps:** *(Placeholder - Requires dedicated Post-Incident Runbook)*
-    1.  **Incident Review Meeting:** Conduct a post-mortem meeting with involved parties. Discuss initial access, spread, impact, response effectiveness, recovery success.
+    1.  **Incident Review Meeting:** Conduct a post-mortem meeting. Discuss initial access, spread, impact, response effectiveness, recovery success.
     2.  **Analyze Response:** Review timeline, tool effectiveness, runbook adherence.
     3.  **Identify Gaps:** Focus on prevention (how did it get in?), detection (was it detected quickly?), and response gaps.
     4.  **Develop Recommendations:** Suggest improvements (e.g., security control changes, new detections, backup strategy review, user training).

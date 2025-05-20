@@ -39,7 +39,7 @@ sequenceDiagram
     participant Cline as Cline (MCP Client)
     participant ReportingTemplates as .clinerules/reporting_templates.md
 
-    Analyst/Agent->>Cline: Initiate Report Writing\\nInput: FINDINGS, RUNBOOK_NAME, CASE_ID, MERMAID_DIAGRAM
+    Analyst/Agent->>Cline: Initiate Report Writing\nInput: FINDINGS, RUNBOOK_NAME, CASE_ID, MERMAID_DIAGRAM
 
     %% Step 1 & 2: Gather Info & Structure
     Note over Cline: Gather all necessary inputs

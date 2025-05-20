@@ -13,9 +13,9 @@ This sub-runbook executes the `siemplify_get_similar_cases` action in the SOAR p
 *   `${CASE_ID}`: The ID of the current case to check against.
 *   `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers for the current case.
 *   *(Optional) `${SIMILARITY_CRITERIA}`: A structure or set of flags indicating the criteria for similarity search (e.g., Rule Generator, Port, Entity Identifier - specific to the `siemplify_get_similar_cases` tool).* Defaults might be defined here or passed by the caller.
-*   *(Optional) `${DAYS_BACK}`: How many days back to search for similar cases (default could be 7 or passed by caller).*\
-*   *(Optional) `${INCLUDE_OPEN}`: Boolean, whether to include open cases (default: true).*\
-*   *(Optional) `${INCLUDE_CLOSED}`: Boolean, whether to include closed cases (default: false).*\
+*   *(Optional) `${DAYS_BACK}`: How many days back to search for similar cases (default could be 7 or passed by caller).*
+*   *(Optional) `${INCLUDE_OPEN}`: Boolean, whether to include open cases (default: true).*
+*   *(Optional) `${INCLUDE_CLOSED}`: Boolean, whether to include closed cases (default: false).*
 
 ## Outputs
 
@@ -38,7 +38,7 @@ sequenceDiagram
     participant CheckDuplicates as check_duplicate_cases.md (This Runbook)
     participant SOAR as secops-soar
 
-    CallingRunbook->>CheckDuplicates: Execute Duplicate Check\\nInput: CASE_ID, ALERT_GROUP_IDS, CRITERIA (opt), DAYS_BACK (opt)...
+    CallingRunbook->>CheckDuplicates: Execute Duplicate Check\nInput: CASE_ID, ALERT_GROUP_IDS, CRITERIA (opt), DAYS_BACK (opt)...
 
     %% Step 2: Check Similar Cases
     Note over CheckDuplicates: Prepare arguments for siemplify_get_similar_cases
@@ -46,7 +46,7 @@ sequenceDiagram
     SOAR-->>CheckDuplicates: Similar Case List (SIMILAR_CASE_IDS), Status (SIMILARITY_CHECK_STATUS)
 
     %% Step 3: Return Results
-    CheckDuplicates-->>CallingRunbook: Return Results:\\nSIMILAR_CASE_IDS,\\nSIMILARITY_CHECK_STATUS
+    CheckDuplicates-->>CallingRunbook: Return Results:\nSIMILAR_CASE_IDS,\nSIMILARITY_CHECK_STATUS
 
 ```
 

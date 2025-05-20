@@ -55,7 +55,7 @@ Uses Tools:
 12. Ask the user to confirm report generation and format preferences (e.g., include time delta, include Gemini summary).
 13. Write the Markdown report to a timestamped file (e.g., `./reports/case_${CASE_ID}_timeline_${timestamp}.md`).
 14. (Optional, based on user feedback) Convert the Markdown report to PDF using `pandoc` via `execute_command`.
-15. (Optional, based on user feedback) Attempt to attach the PDF to the SOAR case. *Note: Direct PDF attachment might require specific SOAR tools not always available. If attachment fails, post a comment with the local path to the MD/PDF report.*\
+15. (Optional, based on user feedback) Attempt to attach the PDF to the SOAR case. *Note: Direct PDF attachment might require specific SOAR tools not always available. If attachment fails, post a comment with the local path to the MD/PDF report.*
 16. (Optional, based on user feedback) Ask the user if they want to perform additional SOAR actions (tagging, priority change, insight, description update, assignment, incident declaration).
 17. (Optional, based on user feedback) Execute selected SOAR actions.
 18. Conclude with `attempt_completion`.
@@ -177,3 +177,4 @@ sequenceDiagram
     else Report Not Confirmed ("No Report")
         Cline->>Cline: attempt_completion(result="Timeline analysis complete. No report generated.")
     end
+```

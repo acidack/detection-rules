@@ -11,8 +11,8 @@ This sub-runbook executes searches using `secops-mcp.get_security_alerts` and `s
 ## Inputs
 
 *   `${IOC_LIST}`: A single IOC value or a list of IOC values (e.g., ["198.51.100.10", "evil-domain.com"]).
-*   *(Optional) `${TIME_FRAME_HOURS}`: Lookback period in hours for the SIEM alert search (default: 168 = 7 days).*\
-*   *(Optional) `${SOAR_CASE_FILTER}`: Additional filter criteria for the SOAR case search (e.g., status="OPEN").*\
+*   *(Optional) `${TIME_FRAME_HOURS}`: Lookback period in hours for the SIEM alert search (default: 168 = 7 days).*
+*   *(Optional) `${SOAR_CASE_FILTER}`: Additional filter criteria for the SOAR case search (e.g., status="OPEN").*
 
 ## Outputs
 
@@ -29,12 +29,12 @@ This sub-runbook executes searches using `secops-mcp.get_security_alerts` and `s
 
 1.  **Receive Input:** Obtain `${IOC_LIST}`, and optional `${TIME_FRAME_HOURS}`, `${SOAR_CASE_FILTER}` from the calling runbook. Initialize `${RELATED_SIEM_ALERTS}` and `${RELATED_SOAR_CASES}` as empty lists/structures.
 2.  **Correlate SIEM Alerts:**
-    *   Construct a query for `secops-mcp.get_security_alerts` to search for alerts containing any IOC in `${IOC_LIST}` within the `${TIME_FRAME_HOURS}`. *Note: The exact query format depends on the tool's capabilities.*\
-    *   Execute the search.\
+    *   Construct a query for `secops-mcp.get_security_alerts` to search for alerts containing any IOC in `${IOC_LIST}` within the `${TIME_FRAME_HOURS}`. *Note: The exact query format depends on the tool's capabilities.*
+    *   Execute the search.
     *   Store the summary of found alerts in `${RELATED_SIEM_ALERTS}`.
 3.  **Correlate SOAR Cases:**
-    *   Construct a filter for `secops-soar.list_cases` to search for cases containing any IOC in `${IOC_LIST}`. Combine with `${SOAR_CASE_FILTER}` if provided. *Note: The exact filter format depends on the tool's capabilities.*\
-    *   Execute the search.\
+    *   Construct a filter for `secops-soar.list_cases` to search for cases containing any IOC in `${IOC_LIST}`. Combine with `${SOAR_CASE_FILTER}` if provided. *Note: The exact filter format depends on the tool's capabilities.*
+    *   Execute the search.
     *   Store the summary of found cases in `${RELATED_SOAR_CASES}`.
 4.  **Return Results:** Set `${CORRELATION_STATUS}` based on the success/failure of the API calls. Return `${RELATED_SIEM_ALERTS}`, `${RELATED_SOAR_CASES}`, and `${CORRELATION_STATUS}` to the calling runbook.
 
@@ -45,7 +45,7 @@ sequenceDiagram
     participant SIEM as secops-mcp
     participant SOAR as secops-soar
 
-    CallingRunbook->>CorrelateIOC: Execute Correlation\\nInput: IOC_LIST, TIME_FRAME_HOURS (opt), SOAR_CASE_FILTER (opt)
+    CallingRunbook->>CorrelateIOC: Execute Correlation\nInput: IOC_LIST, TIME_FRAME_HOURS (opt), SOAR_CASE_FILTER (opt)
 
     %% Step 2: Correlate SIEM Alerts
     Note over CorrelateIOC: Construct SIEM alert query for IOC_LIST
@@ -59,7 +59,7 @@ sequenceDiagram
 
     %% Step 4: Return Results
     Note over CorrelateIOC: Set CORRELATION_STATUS
-    CorrelateIOC-->>CallingRunbook: Return Results:\\nRELATED_SIEM_ALERTS,\\nRELATED_SOAR_CASES,\\nCORRELATION_STATUS
+    CorrelateIOC-->>CallingRunbook: Return Results:\nRELATED_SIEM_ALERTS,\nRELATED_SOAR_CASES,\nCORRELATION_STATUS
 
 ```
 

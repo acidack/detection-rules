@@ -12,9 +12,9 @@ This runbook covers fundamental enrichment steps using readily available GTI and
 
 *   `${IOC_VALUE}`: The specific IOC value (e.g., "198.51.100.10", "evil-domain.com", "abcdef123456...", "http://bad.url/path").
 *   `${IOC_TYPE}`: The type of IOC (e.g., "IP Address", "Domain", "File Hash", "URL").
-*   *(Optional) `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers if needed for context in SOAR actions.*\
-*   *(Optional) `${CASE_ID}`: Relevant case ID if documentation is desired.*\
-*   *(Optional) `${SIEM_SEARCH_HOURS}`: Lookback period for SIEM event search (default: 24).*\
+*   *(Optional) `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers if needed for context in SOAR actions.*
+*   *(Optional) `${CASE_ID}`: Relevant case ID if documentation is desired.*
+*   *(Optional) `${SIEM_SEARCH_HOURS}`: Lookback period for SIEM event search (default: 24).*
 
 ## Outputs
 
@@ -51,14 +51,14 @@ This runbook covers fundamental enrichment steps using readily available GTI and
     *   Store a summary of findings (e.g., count, key event types, involved hosts/users) in `${SIEM_RECENT_EVENTS}`.
 5.  **Search Relevant SOAR Cases:**
     *   Execute `common_steps/find_relevant_soar_case.md` with `SEARCH_TERMS=["${IOC_VALUE}"]` and `CASE_STATUS_FILTER="Opened"`.
-    *   Obtain `${RELEVANT_CASE_IDS}` and `${RELEVANT_CASE_SUMMARIES}`. Let `${FOUND_CASES}` = `${RELEVANT_CASE_SUMMARIES}` (or `${RELEVANT_CASE_IDS}` if summaries aren't needed/available).\
+    *   Obtain `${RELEVANT_CASE_IDS}` and `${RELEVANT_CASE_SUMMARIES}`. Let `${FOUND_CASES}` = `${RELEVANT_CASE_SUMMARIES}` (or `${RELEVANT_CASE_IDS}` if summaries aren't needed/available).
 6.  **Synthesize Findings & Assess Risk:**
     *   Combine all findings: `${GTI_FINDINGS}`, `${GTI_RELATIONSHIPS}`, `${SIEM_ENTITY_SUMMARY}`, `${SIEM_IOC_MATCH_STATUS}`, `${SIEM_RECENT_EVENTS}`, `${FOUND_CASES}`.
     *   Guide the analyst (via output prompt or internal logic) to make an initial risk assessment (`${ASSESSMENT}`) based on the combined data (e.g., GTI reputation, SIEM activity presence/volume, relation to existing cases).
     *   Suggest potential next steps (`${RECOMMENDATION}`) based on the assessment (e.g., Escalate, Monitor, Close FP, Trigger IOC Containment).
 7.  **Conditional Documentation:**
     *   **If `${CASE_ID}` was provided:**
-        *   Prepare `COMMENT_TEXT` summarizing all findings, the assessment, and recommendation (e.g., "Basic IOC Enrichment for `${IOC_VALUE}` (`${IOC_TYPE}`): GTI Rep: [...], GTI Relations: [...], SIEM Summary: [...], SIEM Match: [...], Recent Events: [...], Related Cases: [...]. Assessment: `${ASSESSMENT}`. Recommendation: `${RECOMMENDATION}`.").\
+        *   Prepare `COMMENT_TEXT` summarizing all findings, the assessment, and recommendation (e.g., "Basic IOC Enrichment for `${IOC_VALUE}` (`${IOC_TYPE}`): GTI Rep: [...], GTI Relations: [...], SIEM Summary: [...], SIEM Match: [...], Recent Events: [...], Related Cases: [...]. Assessment: `${ASSESSMENT}`. Recommendation: `${RECOMMENDATION}`.").
         *   Execute `common_steps/document_in_soar.md` with `CASE_ID=${CASE_ID}` and `COMMENT_TEXT`. Obtain `${DOCUMENTATION_STATUS}`.
     *   **Else (`${CASE_ID}` not provided):** Set `${DOCUMENTATION_STATUS}` = "Skipped (No Case ID)".
 8.  **Optional Report Generation:**
@@ -83,7 +83,7 @@ sequenceDiagram
     participant SOAR as secops-soar
     participant User
 
-    Analyst->>Cline: Start Basic IOC Enrichment v2\\nInput: IOC_VALUE, IOC_TYPE, CASE_ID (opt), ...
+    Analyst->>Cline: Start Basic IOC Enrichment v2\nInput: IOC_VALUE, IOC_TYPE, CASE_ID (opt), ...
 
     %% Step 2: Enrich IOC (GTI Report + SIEM Lookup + SIEM Match)
     Cline->>EnrichIOC: Execute(Input: IOC_VALUE, IOC_TYPE)

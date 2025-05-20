@@ -12,7 +12,7 @@ This sub-runbook executes the `post_case_comment` action in the SOAR platform. I
 
 *   `${CASE_ID}`: The SOAR case ID to add the comment to.
 *   `${COMMENT_TEXT}`: The full text of the comment to be added.
-*   *(Optional) `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers if required by the specific SOAR tool implementation, passed from the calling runbook.*\
+*   *(Optional) `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers if required by the specific SOAR tool implementation, passed from the calling runbook.*
 
 ## Outputs
 
@@ -34,14 +34,14 @@ sequenceDiagram
     participant DocumentInSOAR as document_in_soar.md (This Runbook)
     participant SOAR as secops-soar
 
-    CallingRunbook->>DocumentInSOAR: Execute Documentation\\nInput: CASE_ID, COMMENT_TEXT, ALERT_GROUP_IDS (opt)
+    CallingRunbook->>DocumentInSOAR: Execute Documentation\nInput: CASE_ID, COMMENT_TEXT, ALERT_GROUP_IDS (opt)
 
     %% Step 2: Post Comment
     DocumentInSOAR->>SOAR: post_case_comment(case_id=CASE_ID, comment=COMMENT_TEXT, ...)
     SOAR-->>DocumentInSOAR: Comment Post Result (COMMENT_POST_STATUS)
 
     %% Step 3: Return Status
-    DocumentInSOAR-->>CallingRunbook: Return Status:\\nCOMMENT_POST_STATUS
+    DocumentInSOAR-->>CallingRunbook: Return Status:\nCOMMENT_POST_STATUS
 
 ```
 

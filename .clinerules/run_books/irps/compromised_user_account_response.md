@@ -22,13 +22,13 @@ This runbook covers the end-to-end response lifecycle for compromised user accou
 *   `${USER_ID}`: The identifier of the potentially compromised user (e.g., username, email address).
 *   `${CASE_ID}`: The relevant SOAR case ID for documentation.
 *   `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers from the SOAR case.
-*   *(Optional) `${INITIAL_ALERT_DETAILS}`: Summary of the alert that triggered this runbook.*\
+*   *(Optional) `${INITIAL_ALERT_DETAILS}`: Summary of the alert that triggered this runbook.*
 
 ## Tools
 
 *   `secops-mcp`: `search_security_events`, `lookup_entity`
 *   `secops-soar`: `post_case_comment`, `get_case_full_details`
-*   *(Potentially Identity Provider tools like `okta-mcp` if available: `lookup_okta_user`, `disable_okta_user`, `reset_okta_user_password`, `terminate_sessions`, etc.)*\
+*   *(Potentially Identity Provider tools like `okta-mcp` if available: `lookup_okta_user`, `disable_okta_user`, `reset_okta_user_password`, `terminate_sessions`, etc.)*
 *   `ask_followup_question` (To confirm actions)
 *   *(Potentially Email platform tools for checking rules/delegation)*
 *   *(Potentially Endpoint tools if investigating actions taken on hosts)*
@@ -47,7 +47,7 @@ sequenceDiagram
     participant Recovery as Phase 5: Recovery
     participant LessonsLearned as Phase 6: Lessons Learned
 
-    Analyst->>IRP: Start Compromised User Account Response\\nInput: USER_ID, CASE_ID, ALERT_GROUP_IDS, INITIAL_ALERT_DETAILS (opt)
+    Analyst->>IRP: Start Compromised User Account Response\nInput: USER_ID, CASE_ID, ALERT_GROUP_IDS, INITIAL_ALERT_DETAILS (opt)
 
     IRP->>Preparation: Verify Prerequisites (Ongoing)
     Preparation-->>IRP: Readiness Confirmed (Tools, Detections, Plans)
@@ -90,7 +90,7 @@ sequenceDiagram
     1.  **Receive Input & Context:** Obtain `${USER_ID}`, `${CASE_ID}`, `${ALERT_GROUP_IDENTIFIERS}`, and optionally `${INITIAL_ALERT_DETAILS}`. Get case details via `secops-soar.get_case_full_details`. Check for duplicates (`../common_steps/check_duplicate_cases.md`).
     2.  **Gather Initial Context:**
         *   Use `secops-mcp.lookup_entity` for `${USER_ID}` to get a quick summary of recent activity in SIEM.
-        *   *(Optional: Use `okta-mcp.lookup_okta_user` or similar identity tool for `${USER_ID}` to get account status, recent logins, MFA details etc.)*\
+        *   *(Optional: Use `okta-mcp.lookup_okta_user` or similar identity tool for `${USER_ID}` to get account status, recent logins, MFA details etc.)*
     3.  **Analyze User Activity:**
         *   Perform detailed searches in SIEM using `secops-mcp.search_security_events` for `${USER_ID}` covering the relevant timeframe (e.g., last 24-72 hours). Look for:
             *   Anomalous login locations/times/IPs/User Agents.
@@ -102,8 +102,8 @@ sequenceDiagram
             *   Changes to account settings (MFA, recovery email/phone, forwarding rules).
             *   Creation/modification of OAuth application grants.
     4.  **Check Related SOAR Cases:**
-        *   Execute `../common_steps/find_relevant_soar_case.md` with `SEARCH_TERMS=["${USER_ID}"]` and `CASE_STATUS_FILTER="Opened"`.\
-        *   Obtain `${RELATED_SOAR_CASES}` (list of potentially relevant open case summaries/IDs).\
+        *   Execute `../common_steps/find_relevant_soar_case.md` with `SEARCH_TERMS=["${USER_ID}"]` and `CASE_STATUS_FILTER="Opened"`.
+        *   Obtain `${RELATED_SOAR_CASES}` (list of potentially relevant open case summaries/IDs).
     5.  **Assess Compromise Likelihood:** Based on the initial alert, context, activity analysis, and `${RELATED_SOAR_CASES}`, determine the likelihood of compromise (Low, Medium, High, Confirmed).
     6.  **Document Identification Phase:** Document findings (including `${RELATED_SOAR_CASES}`) using `../common_steps/document_in_soar.md`.
 

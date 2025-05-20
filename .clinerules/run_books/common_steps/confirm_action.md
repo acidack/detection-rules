@@ -11,7 +11,7 @@ This sub-runbook executes the `ask_followup_question` tool with a provided quest
 ## Inputs
 
 *   `${QUESTION_TEXT}`: The specific question to ask the user (e.g., "Isolate endpoint ENDPOINT_ID?", "Proceed with containment for IOC_VALUE?").
-*   *(Optional) `${RESPONSE_OPTIONS}`: A list of predefined options for the user to choose from (e.g., ["Yes", "No"], ["Disable Account", "Reset Password", "Monitor Only"]).*\
+*   *(Optional) `${RESPONSE_OPTIONS}`: A list of predefined options for the user to choose from (e.g., ["Yes", "No"], ["Disable Account", "Reset Password", "Monitor Only"]).*
 
 ## Outputs
 
@@ -33,14 +33,14 @@ sequenceDiagram
     participant ConfirmAction as confirm_action.md (This Runbook)
     participant User
 
-    CallingRunbook->>ConfirmAction: Execute Confirmation\\nInput: QUESTION_TEXT, RESPONSE_OPTIONS (opt)
+    CallingRunbook->>ConfirmAction: Execute Confirmation\nInput: QUESTION_TEXT, RESPONSE_OPTIONS (opt)
 
     %% Step 2: Ask Question
     ConfirmAction->>User: ask_followup_question(question=QUESTION_TEXT, options=RESPONSE_OPTIONS)
     User-->>ConfirmAction: User Response (USER_RESPONSE)
 
     %% Step 3: Return Response
-    ConfirmAction-->>CallingRunbook: Return Response:\\nUSER_RESPONSE
+    ConfirmAction-->>CallingRunbook: Return Response:\nUSER_RESPONSE
 
 ```
 

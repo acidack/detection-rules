@@ -14,3 +14,4 @@ This directory contains descriptions of various security roles, outlining their 
  * [SOC Analyst - Tier 3](./soc_analyst_tier_3.md)
  * [SOC Manager](./soc_manager.md)
  * [Threat Hunter](./threat_hunter.md)
+

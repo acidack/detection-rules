@@ -11,10 +11,10 @@ This sub-runbook executes searches within the SOAR platform's case list based on
 ## Inputs
 
 *   `${SEARCH_TERMS}`: A list of values to search for within cases (e.g., ["e323c6aee8b172b57203a7e478c1caca", "mikeross-pc"]).
-*   *(Optional) `${SEARCH_FIELDS}`: A list of fields to search within (e.g., ["entity", "displayName", "description"]). Defaults may vary based on SOAR capabilities.*\
-*   *(Optional) `${CASE_STATUS_FILTER}`: Filter for case status (e.g., "Opened", "Closed"). Defaults to "Opened".*\
-*   *(Optional) `${TIME_FRAME_HOURS}`: Lookback period for case creation/update time (if supported by the filter).*\
-*   *(Optional) `${MAX_RESULTS}`: Maximum number of cases to return.*\
+*   *(Optional) `${SEARCH_FIELDS}`: A list of fields to search within (e.g., ["entity", "displayName", "description"]). Defaults may vary based on SOAR capabilities.*
+*   *(Optional) `${CASE_STATUS_FILTER}`: Filter for case status (e.g., "Opened", "Closed"). Defaults to "Opened".*
+*   *(Optional) `${TIME_FRAME_HOURS}`: Lookback period for case creation/update time (if supported by the filter).*
+*   *(Optional) `${MAX_RESULTS}`: Maximum number of cases to return.*
 
 ## Outputs
 
@@ -46,7 +46,7 @@ sequenceDiagram
     participant FindCase as find_relevant_soar_case.md (This Runbook)
     participant SOAR as secops-soar
 
-    CallingRunbook->>FindCase: Execute Find Relevant Case\\nInput: SEARCH_TERMS, FILTERS (opt)...
+    CallingRunbook->>FindCase: Execute Find Relevant Case\nInput: SEARCH_TERMS, FILTERS (opt)...
 
     %% Step 2: Construct Filter
     Note over FindCase: Construct filter for list_cases based on SEARCH_TERMS and filters
@@ -69,7 +69,7 @@ sequenceDiagram
 
     %% Step 6: Return Results
     Note over FindCase: Set FIND_CASE_STATUS
-    FindCase-->>CallingRunbook: Return Results:\\nRELEVANT_CASE_IDS,\\nRELEVANT_CASE_SUMMARIES,\\nFIND_CASE_STATUS
+    FindCase-->>CallingRunbook: Return Results:\nRELEVANT_CASE_IDS,\nRELEVANT_CASE_SUMMARIES,\nFIND_CASE_STATUS
 
 ```
 

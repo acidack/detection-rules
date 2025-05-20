@@ -14,7 +14,7 @@ This runbook covers the initial assessment and potential network isolation of an
 *   `${ENDPOINT_TYPE}`: The type of identifier provided (e.g., "Hostname", "IP Address").
 *   `${CASE_ID}`: The relevant SOAR case ID for documentation.
 *   `${ALERT_GROUP_IDENTIFIERS}`: Relevant alert group identifiers from the SOAR case.
-*   *(Optional) `${REASON_FOR_TRIAGE}`: Brief description why this endpoint is being triaged.*\
+*   *(Optional) `${REASON_FOR_TRIAGE}`: Brief description why this endpoint is being triaged.*
 
 ## Tools
 
@@ -37,10 +37,10 @@ This runbook covers the initial assessment and potential network isolation of an
         *   Anomalous network connections (especially outbound to known bad IPs/domains).
         *   Significant alert volume associated with the endpoint.
         *   Logins from unusual users or locations.
-    *   *(Optional) Check Vulnerability Status:*\
+    *   *(Optional) Check Vulnerability Status:*
         *   If cloud resource, use `scc-mcp.top_vulnerability_findings` filtering for the resource name.
         *   *(If on-prem/other VM scanner integrated: Query scanner for critical/high vulnerabilities)*.
-    *   *(Optional) Check EDR Status:*\
+    *   *(Optional) Check EDR Status:*
         *   *(Use EDR integration tool `get_endpoint_details` for `${ENDPOINT_ID}` to check agent status, recent EDR alerts, running processes)*.
 4.  **Assess Compromise Likelihood & Need for Isolation:** Based on the gathered context, SIEM activity, vulnerability/EDR status, determine the likelihood of compromise and the urgency for isolation.
 5.  **Confirm Isolation Action:** Use `ask_followup_question` to confirm with the analyst whether network isolation should be performed for `${ENDPOINT_ID}`.
@@ -64,7 +64,7 @@ sequenceDiagram
     participant EDR as EDR (Conceptual) %% EDR Tool
     participant VulnScanner as VulnScanner (Conceptual) %% VM Tool
 
-    Analyst->>Cline: Start Endpoint Triage & Isolation\\nInput: ENDPOINT_ID, ENDPOINT_TYPE, CASE_ID, ALERT_GROUP_IDS
+    Analyst->>Cline: Start Endpoint Triage & Isolation\nInput: ENDPOINT_ID, ENDPOINT_TYPE, CASE_ID, ALERT_GROUP_IDS
 
     %% Step 2: Gather Initial Context
     Cline->>SOAR: get_case_full_details(case_id=CASE_ID)

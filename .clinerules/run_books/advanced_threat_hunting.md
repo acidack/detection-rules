@@ -31,7 +31,7 @@ This runbook outlines a flexible framework for advanced threat hunting, emphasiz
     *   Thoroughly review relevant GTI reports (`get_collection_report`).
     *   Explore related entities, TTPs, and timelines (`get_entities_related_to_a_collection`, `get_collection_timeline_events`, `get_collection_mitre_tree`).
     *   Use `get_threat_intel` for specific technique details.
-    *   *(Manual Step: Consult external TI sources, MITRE ATT&CK, research papers).*\
+    *   *(Manual Step: Consult external TI sources, MITRE ATT&CK, research papers).*
 3.  **Develop Initial Hunt Queries:**
     *   Based on the hypothesis and intelligence, formulate initial advanced queries for `secops-mcp.search_security_events` or `bigquery.execute-query`. Focus on behavioral indicators, anomalies, or specific TTP artifacts.
     *   Combine with `${TARGET_SCOPE_QUERY}`.
@@ -68,7 +68,7 @@ sequenceDiagram
     participant IR_Team as Incident Response
     participant SecEng as Security Engineering
 
-    Analyst/Hunter->>Cline: Start Advanced Threat Hunt\\nInput: HUNT_HYPOTHESIS, GTI_REPORTS (opt), SCOPE (opt), TIME_FRAME, HUNT_CASE_ID (opt)
+    Analyst/Hunter->>Cline: Start Advanced Threat Hunt\nInput: HUNT_HYPOTHESIS, GTI_REPORTS (opt), SCOPE (opt), TIME_FRAME, HUNT_CASE_ID (opt)
 
     %% Step 1: Define Scope & Case
     Note over Cline: Define Hypothesis, Scope, Timeframe. Create/Identify HUNT_CASE_ID.
@@ -133,3 +133,4 @@ sequenceDiagram
         Note over Cline: Document negative results and limitations
         Cline->>Analyst/Hunter: attempt_completion(result="Advanced Hunt complete. No significant findings. Hunt documented.")
     end
+```

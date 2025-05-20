@@ -12,8 +12,8 @@ This runbook covers gathering essential details about the alert(s), associated e
 
 *   `${CASE_ID}`: The relevant SOAR case ID containing the alert(s).
 *   `${ALERT_GROUP_IDENTIFIERS}`: A list of relevant alert group identifiers within the case. Alternatively, provide specific `${ALERT_IDS}`.
-*   *(Optional) `${ALERT_IDS}`: Comma-separated list of specific alert IDs to focus on if `${ALERT_GROUP_IDENTIFIERS}` is not used.*\
-*   *(Optional) `${REPORT_FILENAME_SUFFIX}`: A suffix to append to the report filename (e.g., "initial_triage").*\
+*   *(Optional) `${ALERT_IDS}`: Comma-separated list of specific alert IDs to focus on if `${ALERT_GROUP_IDENTIFIERS}` is not used.*
+*   *(Optional) `${REPORT_FILENAME_SUFFIX}`: A suffix to append to the report filename (e.g., "initial_triage").*
 
 ## Tools
 
@@ -39,7 +39,7 @@ This runbook covers gathering essential details about the alert(s), associated e
         *   Use the appropriate `gti-mcp.get_..._report` tool based on entity type (IP, Domain, Hash, URL) to get threat intelligence reputation/context.
     *   Store enrichment summaries.
 5.  **(Optional) Search Related SIEM Activity:**
-    *   *(Guidance: Consider performing this step if initial enrichment reveals highly critical IOCs or if the alert context is unclear).*\
+    *   *(Guidance: Consider performing this step if initial enrichment reveals highly critical IOCs or if the alert context is unclear).*
         *   Perform limited `secops-mcp.search_security_events` queries around the alert timeframe for the most critical entities identified (e.g., the primary host or user) to find immediate related context beyond the specific alert events.
 6.  **Synthesize & Format Report:**
     *   Create a Markdown report structure including (referencing `.clinerules/reporting_templates.md` and `.clinerules/run_books/guidelines/runbook_guidelines.md`):
@@ -68,7 +68,7 @@ sequenceDiagram
     participant SIEM as secops-mcp
     participant GTI as Google Threat Intelligence MCP server
 
-    Analyst/User->>Cline: Generate Alert Report\\nInput: CASE_ID, ALERT_GROUP_IDS/ALERT_IDS, FILENAME_SUFFIX (opt)
+    Analyst/User->>Cline: Generate Alert Report\nInput: CASE_ID, ALERT_GROUP_IDS/ALERT_IDS, FILENAME_SUFFIX (opt)
 
     %% Step 1: Context
     Cline->>SOAR: get_case_full_details(case_id=CASE_ID)
