@@ -2086,15 +2086,3 @@ wmic_ntds_dit_T1003_003_cisa_report:
   revision_id: v_1744936965_873583000
   run_frequency: LIVE
   type: SINGLE_EVENT
-user_login_from_cn_ru:
-  alerting: true
-  archive_time: null
-  archived: false
-  create_time: null
-  enabled: true
-  id: null
-  resource_name: null
-  revision_create_time: null
-  revision_id: null
-  run_frequency: LIVE
-  type: SINGLE_EVENT
