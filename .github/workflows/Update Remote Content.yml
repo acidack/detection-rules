@@ -23,12 +23,14 @@ jobs:
   update-remote-content:
     runs-on: ubuntu-latest
     environment: .env
-env:
+
+
+    env:
       LOGGING_LEVEL: ${{ vars.LOGGING_LEVEL }}
       GOOGLE_SECOPS_API_BASE_URL: ${{ vars.GOOGLE_SECOPS_API_BASE_URL }}
-      GOOGLE_SECOPS_API_UPLOAD_BASE_URL: ${{ vars.GOOGLE_SECOPS_API_UPLOAD_BASE_URL }}
       GOOGLE_SECOPS_INSTANCE: ${{ vars.GOOGLE_SECOPS_INSTANCE }}
       AUTHORIZATION_SCOPES: ${{ vars.AUTHORIZATION_SCOPES }}
+      GOOGLE_SECOPS_API_UPLOAD_BASE_URL: ${{ vars.GOOGLE_SECOPS_API_UPLOAD_BASE_URL }}
 
     steps:
       - uses: actions/checkout@v4
