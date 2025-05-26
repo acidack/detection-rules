@@ -42,6 +42,8 @@ rule github_application_installed {
     $principal_ip_state = array_distinct($github.principal.ip_geo_artifact.location.state)
     $principal_ip_city = array_distinct($github.principal.location.city)
     $security_result_summary = array_distinct($github.security_result.summary)
+    $mitre_attack_tactic = array_distinct("TA0003", "TA0005")
+    $mitre_attack_technique = array_distinct("T1550.001")
 
   condition:
     $github
