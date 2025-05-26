@@ -802,6 +802,18 @@ geoip_user_login_from_multiple_states_or_countries:
   revision_id: v_1744936965_781535000
   run_frequency: HOURLY
   type: MULTI_EVENT
+github_application_installed:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-05-26T02:06:50.181103Z'
+  enabled: false
+  id: ru_10eb2eff-33b7-4999-82c6-2ecbd988c551
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_10eb2eff-33b7-4999-82c6-2ecbd988c551
+  revision_create_time: '2025-05-26T02:06:50.181103Z'
+  revision_id: v_1748225210_181103000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 github_user_role_updated:
   alerting: false
   archive_time: null
@@ -2086,6 +2098,3 @@ wmic_ntds_dit_T1003_003_cisa_report:
   revision_id: v_1744936965_873583000
   run_frequency: LIVE
   type: SINGLE_EVENT
-github_application_installed:
-  alerting: false
-  enabled: false
