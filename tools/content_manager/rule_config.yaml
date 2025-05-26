@@ -78,8 +78,8 @@ aws_console_login_without_mfa:
   enabled: false
   id: ru_7a871960-c1da-4782-8ae7-e8c916610380
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_7a871960-c1da-4782-8ae7-e8c916610380
-  revision_create_time: '2025-04-18T00:42:41.437407Z'
-  revision_id: v_1744936961_437407000
+  revision_create_time: '2025-05-26T01:45:51.122543Z'
+  revision_id: v_1748223951_122543000
   run_frequency: HOURLY
   type: SINGLE_EVENT
 aws_delete_cloudwatch_log_group:
