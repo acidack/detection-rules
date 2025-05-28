@@ -30,8 +30,8 @@ ag_ioc_sha256_hash_vt_basic:
   enabled: false
   id: ru_5093731f-384d-4bed-96e9-6b4621cd0a53
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_5093731f-384d-4bed-96e9-6b4621cd0a53
-  revision_create_time: '2025-04-18T00:42:43.778495Z'
-  revision_id: v_1744936963_778495000
+  revision_create_time: '2025-05-28T13:03:34.300399Z'
+  revision_id: v_1748437414_300399000
   run_frequency: LIVE
   type: MULTI_EVENT
 aws_account_leaving_or_removed_from_organization:

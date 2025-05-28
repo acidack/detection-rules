@@ -18,6 +18,26 @@ apt40_file_iocs:
   rules: null
   update_time: '2025-05-26T04:54:21.600579Z'
   uuid: 5e3f30b27a164a5eaf5ae1ee9d25579d
+data_table_5:
+  columns:
+  - column_index: 0
+    column_type: STRING
+    key_column: null
+    mapped_column_path: null
+    original_column: userid
+  - column_index: 1
+    column_type: STRING
+    key_column: null
+    mapped_column_path: null
+    original_column: hostname
+  create_time: '2025-05-28T10:41:51.309636Z'
+  description: My new data table
+  resource_name: projects/malachite-ace-373104/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/dataTables/data_table_5
+  row_time_to_live: null
+  rule_associations_count: null
+  rules: null
+  update_time: '2025-05-28T10:46:51.835370Z'
+  uuid: 22c681f2163047ad9348938aebbd9a97
 newtest:
   columns:
   - column_index: 0
