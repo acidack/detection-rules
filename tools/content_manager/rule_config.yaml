@@ -1846,6 +1846,18 @@ suspicious_download_office:
   revision_id: v_1744936965_307887000
   run_frequency: LIVE
   type: MULTI_EVENT
+suspicious_powershell_download_execution:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2025-05-29T02:13:59.902623Z'
+  enabled: true
+  id: ru_226b3715-ad39-4490-b9ad-a61eba2e17dd
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_226b3715-ad39-4490-b9ad-a61eba2e17dd
+  revision_create_time: '2025-05-29T02:13:59.902623Z'
+  revision_id: v_1748484839_902623000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 suspicious_unusual_location_lnk_file:
   alerting: false
   archive_time: null
