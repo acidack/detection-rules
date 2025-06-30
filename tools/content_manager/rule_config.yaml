@@ -10,6 +10,30 @@ Chrome_Browser_Safe_Browsing_User_Bypass:
   revision_id: v_1716379059_480879000
   run_frequency: LIVE
   type: SINGLE_EVENT
+Cobalt_Strike_PowerShell_Download_Execute:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-06-30T12:44:55.428671Z'
+  enabled: false
+  id: ru_1237fa6f-c334-4eca-b978-b9131f440735
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_1237fa6f-c334-4eca-b978-b9131f440735
+  revision_create_time: '2025-06-30T12:44:55.428671Z'
+  revision_id: v_1751287495_428671000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+Cobalt_Strike_PowerShell_Download_Execute_YARAL:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-06-30T12:46:29.213215Z'
+  enabled: false
+  id: ru_c8151dc2-c321-48a0-894d-604d0a149dfd
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_c8151dc2-c321-48a0-894d-604d0a149dfd
+  revision_create_time: '2025-06-30T12:46:29.213215Z'
+  revision_id: v_1751287589_213215000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 adfs_db_suspicious_named_pipe_connection:
   alerting: false
   archive_time: null
