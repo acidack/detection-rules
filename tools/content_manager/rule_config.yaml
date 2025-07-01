@@ -35,11 +35,11 @@ Cobalt_Strike_PowerShell_Download_Execute_YARAL:
   run_frequency: LIVE
   type: SINGLE_EVENT
 adfs_db_suspicious_named_pipe_connection:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:13.462367Z'
-  enabled: false
+  enabled: true
   id: ru_ec830669-5a21-4f4a-be79-7dbc202d8afc
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_ec830669-5a21-4f4a-be79-7dbc202d8afc
   revision_create_time: '2025-04-18T00:42:45.397071Z'
@@ -47,11 +47,11 @@ adfs_db_suspicious_named_pipe_connection:
   run_frequency: LIVE
   type: SINGLE_EVENT
 ag_ioc_sha256_hash_vt_basic:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.308959Z'
-  enabled: false
+  enabled: true
   id: ru_5093731f-384d-4bed-96e9-6b4621cd0a53
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_5093731f-384d-4bed-96e9-6b4621cd0a53
   revision_create_time: '2025-05-30T01:04:29.947551Z'
@@ -694,6 +694,30 @@ demoverse_Chrome_Browser_DLP_File_Transfer_Alert:
   revision_id: v_1729716258_293727000
   run_frequency: LIVE
   type: SINGLE_EVENT
+demoverse_HMS_CatchAll:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:52:10.698751Z'
+  enabled: false
+  id: ru_cc7cb575-8ac4-4434-8012-5493bb2d9585
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_cc7cb575-8ac4-4434-8012-5493bb2d9585
+  revision_create_time: '2025-07-01T11:52:10.698751Z'
+  revision_id: v_1751370730_698751000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+demoverse_cryptocurrency_mining_yara:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:52:10.781359Z'
+  enabled: false
+  id: ru_03dbf665-f2f7-4122-a214-ef1816878e93
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_03dbf665-f2f7-4122-a214-ef1816878e93
+  revision_create_time: '2025-07-01T11:52:10.781359Z'
+  revision_id: v_1751370730_781359000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 demoverse_mandiant_asm_confirmed_cve_alert:
   alerting: true
   archive_time: null
@@ -728,6 +752,30 @@ demoverse_suspicious_auth_unusual_interval_time:
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_937726c4-95ea-441c-bf4f-0e02643df24c
   revision_create_time: '2024-10-23T20:44:18.824975Z'
   revision_id: v_1729716258_824975000
+  run_frequency: HOURLY
+  type: MULTI_EVENT
+demoverse_suspicious_auth_unusual_interval_time2:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:53:30.586223Z'
+  enabled: false
+  id: ru_11106fec-bb93-440b-bad4-698708034a25
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_11106fec-bb93-440b-bad4-698708034a25
+  revision_create_time: '2025-07-01T11:53:30.586223Z'
+  revision_id: v_1751370810_586223000
+  run_frequency: HOURLY
+  type: MULTI_EVENT
+demoverse_suspicious_auth_unusual_interval_time_v2:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:53:30.458783Z'
+  enabled: false
+  id: ru_b988bf83-8dab-431a-8965-1a6e6e936db3
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_b988bf83-8dab-431a-8965-1a6e6e936db3
+  revision_create_time: '2025-07-01T11:53:30.458783Z'
+  revision_id: v_1751370810_458783000
   run_frequency: HOURLY
   type: MULTI_EVENT
 demoverse_user_download_executable_from_macro:
@@ -779,11 +827,11 @@ domain_prevalence:
   run_frequency: LIVE
   type: MULTI_EVENT
 gcti_benign_binaries_contacts_tor_exit_node:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:12.060207Z'
-  enabled: false
+  enabled: true
   id: ru_5cd29e05-cf20-47d2-b651-a2b417696586
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_5cd29e05-cf20-47d2-b651-a2b417696586
   revision_create_time: '2025-04-18T00:42:43.391183Z'
@@ -791,11 +839,11 @@ gcti_benign_binaries_contacts_tor_exit_node:
   run_frequency: LIVE
   type: MULTI_EVENT
 gcti_remote_access_tools:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:08.670143Z'
-  enabled: false
+  enabled: true
   id: ru_3f40da9d-2429-42b5-ba45-ac4b3656c478
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_3f40da9d-2429-42b5-ba45-ac4b3656c478
   revision_create_time: '2025-04-20T00:43:45.139375Z'
@@ -803,11 +851,11 @@ gcti_remote_access_tools:
   run_frequency: LIVE
   type: MULTI_EVENT
 gcti_tor_exit_nodes:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:14.661215Z'
-  enabled: false
+  enabled: true
   id: ru_d346e1dd-c852-4584-bd22-b8886c657135
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_d346e1dd-c852-4584-bd22-b8886c657135
   revision_create_time: '2025-04-20T00:43:45.050335Z'
@@ -815,11 +863,11 @@ gcti_tor_exit_nodes:
   run_frequency: HOURLY
   type: MULTI_EVENT
 geoip_user_login_from_multiple_states_or_countries:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:11.297823Z'
-  enabled: false
+  enabled: true
   id: ru_bee40bd7-899a-4ad7-9338-8b82a59d2ca6
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_bee40bd7-899a-4ad7-9338-8b82a59d2ca6
   revision_create_time: '2025-04-18T00:42:45.781535Z'
@@ -863,11 +911,11 @@ google_safebrowsing_file_contacts_tor_exit_node:
   run_frequency: HOURLY
   type: MULTI_EVENT
 google_safebrowsing_file_process_creation:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:07.413487Z'
-  enabled: false
+  enabled: true
   id: ru_838bd2b4-6541-4abb-9452-7c2702735fa9
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_838bd2b4-6541-4abb-9452-7c2702735fa9
   revision_create_time: '2025-04-18T00:42:48.132591Z'
@@ -875,11 +923,11 @@ google_safebrowsing_file_process_creation:
   run_frequency: HOURLY
   type: MULTI_EVENT
 google_safebrowsing_with_prevalence:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:15.084047Z'
-  enabled: false
+  enabled: true
   id: ru_0b4f6fcb-11af-4f60-b1c9-009a6904aae7
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_0b4f6fcb-11af-4f60-b1c9-009a6904aae7
   revision_create_time: '2025-04-18T00:42:50.148735Z'
@@ -911,11 +959,11 @@ high_risk_user_download_executable_from_macro:
   run_frequency: LIVE
   type: MULTI_EVENT
 impacket_wmiexec_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:14.603551Z'
-  enabled: false
+  enabled: true
   id: ru_ebf0da05-6df8-4d52-afd1-672a31d195cf
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_ebf0da05-6df8-4d52-afd1-672a31d195cf
   revision_create_time: '2025-04-18T00:42:40.897887Z'
@@ -935,11 +983,11 @@ info_bat:
   run_frequency: LIVE
   type: SINGLE_EVENT
 ioc_domain_C2:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:14.429951Z'
-  enabled: false
+  enabled: true
   id: ru_5ce86854-33c2-401b-93a9-fdd50e999258
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_5ce86854-33c2-401b-93a9-fdd50e999258
   revision_create_time: '2025-04-18T00:42:41.350431Z'
@@ -947,11 +995,11 @@ ioc_domain_C2:
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_domain_internal_policy:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.803455Z'
-  enabled: false
+  enabled: true
   id: ru_fab80190-a561-4d7f-a99a-3d3a39e6b584
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_fab80190-a561-4d7f-a99a-3d3a39e6b584
   revision_create_time: '2025-04-18T00:42:47.122239Z'
@@ -959,11 +1007,11 @@ ioc_domain_internal_policy:
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_hash_prevalence:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.708351Z'
-  enabled: false
+  enabled: true
   id: ru_d1eb2372-552d-48ba-9c70-9d34ec900b2c
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_d1eb2372-552d-48ba-9c70-9d34ec900b2c
   revision_create_time: '2025-04-18T00:42:43.082175Z'
@@ -971,11 +1019,11 @@ ioc_hash_prevalence:
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_ip_target:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:09.095087Z'
-  enabled: false
+  enabled: true
   id: ru_46af6d2f-eac7-4261-9402-2d85a4a773a1
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_46af6d2f-eac7-4261-9402-2d85a4a773a1
   revision_create_time: '2025-04-18T00:42:47.458527Z'
@@ -983,11 +1031,11 @@ ioc_ip_target:
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_sha256_hash:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.863151Z'
-  enabled: false
+  enabled: true
   id: ru_20c38ff4-8833-4d31-89ba-838fbf1591f4
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_20c38ff4-8833-4d31-89ba-838fbf1591f4
   revision_create_time: '2025-04-18T00:42:49.853615Z'
@@ -995,11 +1043,11 @@ ioc_sha256_hash:
   run_frequency: LIVE
   type: MULTI_EVENT
 ioc_sha256_hash_vt:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.780831Z'
-  enabled: false
+  enabled: true
   id: ru_c1fc902c-9cfb-41b9-88d8-6aa25990b3fe
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_c1fc902c-9cfb-41b9-88d8-6aa25990b3fe
   revision_create_time: '2025-04-20T00:43:46.380127Z'
@@ -1055,11 +1103,11 @@ malware_found:
   run_frequency: LIVE
   type: SINGLE_EVENT
 malware_win_lokibot_c2:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:14.270751Z'
-  enabled: false
+  enabled: true
   id: ru_42110c73-8fcb-4c17-86ed-88b5b59560f5
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_42110c73-8fcb-4c17-86ed-88b5b59560f5
   revision_create_time: '2025-04-18T00:42:47.869551Z'
@@ -1127,11 +1175,11 @@ metric_examples_http:
   run_frequency: HOURLY
   type: MULTI_EVENT
 mitre_attack_T1021_002_windows_admin_share_basic:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:08.317263Z'
-  enabled: false
+  enabled: true
   id: ru_3592130d-a11d-4160-96ba-1c498880658b
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_3592130d-a11d-4160-96ba-1c498880658b
   revision_create_time: '2025-04-20T00:43:44.202447Z'
@@ -1151,11 +1199,11 @@ mitre_attack_T1021_002_windows_admin_share_with_asset_entity:
   run_frequency: LIVE
   type: MULTI_EVENT
 mitre_attack_T1021_002_windows_admin_share_with_user_enrichment:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:07.163471Z'
-  enabled: false
+  enabled: true
   id: ru_8fc68e0f-1933-4445-93ee-ccc71f9fd358
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_8fc68e0f-1933-4445-93ee-ccc71f9fd358
   revision_create_time: '2025-04-18T00:42:48.032239Z'
@@ -1163,11 +1211,11 @@ mitre_attack_T1021_002_windows_admin_share_with_user_enrichment:
   run_frequency: LIVE
   type: SINGLE_EVENT
 mitre_attack_T1021_002_windows_admin_share_with_user_entity:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.299375Z'
-  enabled: false
+  enabled: true
   id: ru_bb4a48d7-f3c3-48b2-9dcc-f8d448b917c9
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_bb4a48d7-f3c3-48b2-9dcc-f8d448b917c9
   revision_create_time: '2025-04-18T00:42:50.245695Z'
@@ -1187,11 +1235,11 @@ mitre_attack_T1053_005_windows_creation_of_scheduled_task:
   run_frequency: LIVE
   type: SINGLE_EVENT
 mitre_attack_T1140_encoded_powershell_command:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.389871Z'
-  enabled: false
+  enabled: true
   id: ru_b89bcb8b-8ec1-4057-b1df-154678cc17ca
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_b89bcb8b-8ec1-4057-b1df-154678cc17ca
   revision_create_time: '2025-04-18T00:42:39.636143Z'
@@ -1223,11 +1271,11 @@ network_connection_first_seen_in_past_day:
   run_frequency: HOURLY
   type: MULTI_EVENT
 network_http_low_prevalence_domain_access:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.187295Z'
-  enabled: false
+  enabled: true
   id: ru_c5d6c2a6-d17b-4c87-9104-553b78980dbe
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_c5d6c2a6-d17b-4c87-9104-553b78980dbe
   revision_create_time: '2025-04-18T00:42:46.153887Z'
@@ -1235,11 +1283,11 @@ network_http_low_prevalence_domain_access:
   run_frequency: HOURLY
   type: MULTI_EVENT
 network_traffic_to_specific_country:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:03.643679Z'
-  enabled: false
+  enabled: true
   id: ru_f5936e8b-8ac0-4a83-84c8-f79c8ad5f589
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_f5936e8b-8ac0-4a83-84c8-f79c8ad5f589
   revision_create_time: '2025-04-18T00:42:49.478783Z'
@@ -1258,6 +1306,42 @@ new_rule_mcp:
   revision_id: v_1747352893_757135000
   run_frequency: HOURLY
   type: MULTI_EVENT
+non_prod_arg_unc3944_cli_13:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:53:30.649087Z'
+  enabled: false
+  id: ru_be02c74d-ad98-4d51-aafc-9e665a56f869
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_be02c74d-ad98-4d51-aafc-9e665a56f869
+  revision_create_time: '2025-07-01T11:53:30.649087Z'
+  revision_id: v_1751370810_649087000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+non_prod_arg_unc3944_cli_22:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:53:30.841695Z'
+  enabled: false
+  id: ru_98d624b1-0bc5-46e5-98ef-01c5edf6ed3f
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_98d624b1-0bc5-46e5-98ef-01c5edf6ed3f
+  revision_create_time: '2025-07-01T11:53:30.841695Z'
+  revision_id: v_1751370810_841695000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+non_prod_arg_unc3944_cli_3:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-01T11:53:30.705535Z'
+  enabled: false
+  id: ru_218389c3-271a-4e62-a2d8-1dd7562582f0
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_218389c3-271a-4e62-a2d8-1dd7562582f0
+  revision_create_time: '2025-07-01T11:53:30.705535Z'
+  revision_id: v_1751370810_705535000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 o365_ADPowerShell_app_login_subsequent_activity:
   alerting: false
   archive_time: null
@@ -1391,11 +1475,11 @@ o365_recently_created_entra_id_user_assigned_roles:
   run_frequency: HOURLY
   type: MULTI_EVENT
 okta_mfa_brute_force_attack:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:11.523887Z'
-  enabled: false
+  enabled: true
   id: ru_8896744c-1b2d-4e01-b27e-b396b0e2dd7c
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_8896744c-1b2d-4e01-b27e-b396b0e2dd7c
   revision_create_time: '2025-04-18T00:42:48.824031Z'
@@ -1403,11 +1487,11 @@ okta_mfa_brute_force_attack:
   run_frequency: LIVE
   type: MULTI_EVENT
 okta_mismatch_between_source_and_response_for_verify_push_request:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:13.612175Z'
-  enabled: false
+  enabled: true
   id: ru_7d7be0fa-4f03-46d7-a63c-a90b63e22477
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_7d7be0fa-4f03-46d7-a63c-a90b63e22477
   revision_create_time: '2025-04-18T00:42:40.253263Z'
@@ -1415,11 +1499,11 @@ okta_mismatch_between_source_and_response_for_verify_push_request:
   run_frequency: LIVE
   type: MULTI_EVENT
 okta_multiple_failed_requests_to_access_applications:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:03.081647Z'
-  enabled: false
+  enabled: true
   id: ru_47074532-3f4c-4b6c-b718-00469b5e46f8
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_47074532-3f4c-4b6c-b718-00469b5e46f8
   revision_create_time: '2025-04-18T00:42:45.585951Z'
@@ -1427,11 +1511,11 @@ okta_multiple_failed_requests_to_access_applications:
   run_frequency: LIVE
   type: MULTI_EVENT
 okta_multiple_users_logins_with_invalid_credentials_from_the_same_ip:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:12.266959Z'
-  enabled: false
+  enabled: true
   id: ru_1be8e5b2-d443-4ffb-a15c-6f39ae62aee7
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_1be8e5b2-d443-4ffb-a15c-6f39ae62aee7
   revision_create_time: '2025-04-18T00:42:40.095103Z'
@@ -1439,11 +1523,11 @@ okta_multiple_users_logins_with_invalid_credentials_from_the_same_ip:
   run_frequency: HOURLY
   type: MULTI_EVENT
 okta_new_api_token_created:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-12-11T23:36:01.905375Z'
-  enabled: false
+  enabled: true
   id: ru_6a499005-cdda-4693-abe0-3e364e83b43e
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_6a499005-cdda-4693-abe0-3e364e83b43e
   revision_create_time: '2025-04-18T00:42:46.332383Z'
@@ -1511,11 +1595,11 @@ okta_new_api_token_created_test:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_phishing_detection_with_fastpass_origin_check:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.243327Z'
-  enabled: false
+  enabled: true
   id: ru_105d8dbf-e3c3-4c13-ae28-2a4bb37ff210
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_105d8dbf-e3c3-4c13-ae28-2a4bb37ff210
   revision_create_time: '2025-04-18T00:42:39.210975Z'
@@ -1523,11 +1607,11 @@ okta_phishing_detection_with_fastpass_origin_check:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_successful_high_risk_user_logins:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:02.735519Z'
-  enabled: false
+  enabled: true
   id: ru_54c07de4-a51b-4795-ab5b-c94d0eda0af0
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_54c07de4-a51b-4795-ab5b-c94d0eda0af0
   revision_create_time: '2025-04-18T00:42:47.314671Z'
@@ -1535,11 +1619,11 @@ okta_successful_high_risk_user_logins:
   run_frequency: LIVE
   type: MULTI_EVENT
 okta_suspicious_use_of_a_session_cookie:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:03.329295Z'
-  enabled: false
+  enabled: true
   id: ru_d8521234-ce9a-4915-bb84-f081b6c63ccf
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_d8521234-ce9a-4915-bb84-f081b6c63ccf
   revision_create_time: '2025-04-18T00:42:47.771775Z'
@@ -1547,11 +1631,11 @@ okta_suspicious_use_of_a_session_cookie:
   run_frequency: HOURLY
   type: MULTI_EVENT
 okta_threatinsight_login_failure_with_high_unknown_users:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:11.225855Z'
-  enabled: false
+  enabled: true
   id: ru_01f6d162-011c-4211-8b5e-f535cc2e56d4
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_01f6d162-011c-4211-8b5e-f535cc2e56d4
   revision_create_time: '2025-04-18T00:42:42.414207Z'
@@ -1559,11 +1643,11 @@ okta_threatinsight_login_failure_with_high_unknown_users:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_threatinsight_suspected_brute_force_attack:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:11.699423Z'
-  enabled: false
+  enabled: true
   id: ru_0aeee66c-7380-4b9b-af50-8633fd74bed5
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_0aeee66c-7380-4b9b-af50-8633fd74bed5
   revision_create_time: '2025-04-20T00:43:46.476703Z'
@@ -1571,11 +1655,11 @@ okta_threatinsight_suspected_brute_force_attack:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_threatinsight_suspected_password_spray_attack:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:13.379071Z'
-  enabled: false
+  enabled: true
   id: ru_4ef307c4-f445-4dbc-bb46-14e5fb19e779
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_4ef307c4-f445-4dbc-bb46-14e5fb19e779
   revision_create_time: '2025-04-20T00:43:43.646847Z'
@@ -1583,11 +1667,11 @@ okta_threatinsight_suspected_password_spray_attack:
   run_frequency: LIVE
   type: SINGLE_EVENT
 okta_threatinsight_targeted_brute_force_attack:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:03.492415Z'
-  enabled: false
+  enabled: true
   id: ru_eb8239af-3afc-4393-8443-75379ca5aa36
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_eb8239af-3afc-4393-8443-75379ca5aa36
   revision_create_time: '2025-04-18T00:42:42.603023Z'
@@ -1595,11 +1679,11 @@ okta_threatinsight_targeted_brute_force_attack:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_user_account_lockout:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:02.899823Z'
-  enabled: false
+  enabled: true
   id: ru_ea520a8e-713b-4741-857a-f683c172aa3f
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_ea520a8e-713b-4741-857a-f683c172aa3f
   revision_create_time: '2025-04-18T00:42:46.423551Z'
@@ -1619,11 +1703,11 @@ okta_user_failed_login:
   run_frequency: LIVE
   type: SINGLE_EVENT
 okta_user_failed_number_challenge_during_push_notification:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-22T23:25:06.818671Z'
-  enabled: false
+  enabled: true
   id: ru_96997d48-3266-40c8-b3e8-b3dd43a41111
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_96997d48-3266-40c8-b3e8-b3dd43a41111
   revision_create_time: '2025-04-18T00:42:40.991103Z'
@@ -1631,11 +1715,11 @@ okta_user_failed_number_challenge_during_push_notification:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_user_login_out_of_hours:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:05.353823Z'
-  enabled: false
+  enabled: true
   id: ru_6ec367ec-5e80-4964-9576-b04534c456da
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_6ec367ec-5e80-4964-9576-b04534c456da
   revision_create_time: '2025-04-18T00:42:45.122767Z'
@@ -1643,11 +1727,11 @@ okta_user_login_out_of_hours:
   run_frequency: HOURLY
   type: SINGLE_EVENT
 okta_user_logins_from_multiple_cities:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:05.610623Z'
-  enabled: false
+  enabled: true
   id: ru_f2c1e81b-76c5-4c5d-bdbe-871bb49e68eb
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_f2c1e81b-76c5-4c5d-bdbe-871bb49e68eb
   revision_create_time: '2025-04-18T00:42:45.216703Z'
@@ -1655,11 +1739,11 @@ okta_user_logins_from_multiple_cities:
   run_frequency: HOURLY
   type: MULTI_EVENT
 okta_user_rejected_multiple_push_notifications:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:04.331487Z'
-  enabled: false
+  enabled: true
   id: ru_0a22029d-c836-4c68-95d3-335e24462165
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_0a22029d-c836-4c68-95d3-335e24462165
   revision_create_time: '2025-04-18T00:42:48.735999Z'
@@ -1667,11 +1751,11 @@ okta_user_rejected_multiple_push_notifications:
   run_frequency: LIVE
   type: MULTI_EVENT
 okta_user_suspicious_activity_reported:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:05.037983Z'
-  enabled: false
+  enabled: true
   id: ru_5bb58087-4b03-441f-8710-b4214a8a89cd
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_5bb58087-4b03-441f-8710-b4214a8a89cd
   revision_create_time: '2025-04-20T00:43:46.099103Z'
@@ -1690,12 +1774,24 @@ out_of_hours_login:
   revision_id: v_1702359568_059407000
   run_frequency: LIVE
   type: SINGLE_EVENT
-port_proxy_forwarding_T1090_cisa_report:
+phishing_from_pp:
   alerting: false
   archive_time: null
   archived: false
-  create_time: '2024-05-23T02:12:11.015103Z'
+  create_time: '2025-07-01T11:53:30.517791Z'
   enabled: false
+  id: ru_1b654fac-1634-4d05-b051-f9f63932453c
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_1b654fac-1634-4d05-b051-f9f63932453c
+  revision_create_time: '2025-07-01T11:53:30.517791Z'
+  revision_id: v_1751370810_517791000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+port_proxy_forwarding_T1090_cisa_report:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2024-05-23T02:12:11.015103Z'
+  enabled: true
   id: ru_aa891fd2-654a-464d-b919-4eae84a41a54
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_aa891fd2-654a-464d-b919-4eae84a41a54
   revision_create_time: '2025-04-18T00:42:39.719375Z'
@@ -1715,11 +1811,11 @@ process_launch_vt_enrichment:
   run_frequency: LIVE
   type: SINGLE_EVENT
 recon_credential_theft_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.109631Z'
-  enabled: false
+  enabled: true
   id: ru_d16f4e0c-8151-4ba8-8878-33331ec1eb34
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_d16f4e0c-8151-4ba8-8878-33331ec1eb34
   revision_create_time: '2025-04-20T00:43:44.945791Z'
@@ -1727,11 +1823,11 @@ recon_credential_theft_cisa_report:
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_environment_enumeration_active_directory_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.733551Z'
-  enabled: false
+  enabled: true
   id: ru_5c4d9e19-1950-4892-8575-b8cfbe2f9dad
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_5c4d9e19-1950-4892-8575-b8cfbe2f9dad
   revision_create_time: '2025-04-18T00:42:39.548447Z'
@@ -1739,11 +1835,11 @@ recon_environment_enumeration_active_directory_cisa_report:
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_environment_enumeration_network_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:14.511103Z'
-  enabled: false
+  enabled: true
   id: ru_9d29d434-f366-4f85-815e-fb231ea60197
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_9d29d434-f366-4f85-815e-fb231ea60197
   revision_create_time: '2025-04-18T00:42:48.924607Z'
@@ -1751,11 +1847,11 @@ recon_environment_enumeration_network_cisa_report:
   run_frequency: LIVE
   type: MULTI_EVENT
 recon_environment_enumeration_system_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:12.378831Z'
-  enabled: false
+  enabled: true
   id: ru_324f945c-0b8a-4ed8-9680-8c354437ee20
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_324f945c-0b8a-4ed8-9680-8c354437ee20
   revision_create_time: '2025-04-18T00:42:39.118127Z'
@@ -1775,11 +1871,11 @@ recon_successful_logon_enumeration_powershell_T1033_cisa_report:
   run_frequency: LIVE
   type: SINGLE_EVENT
 recon_suspicious_commands_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:13.540943Z'
-  enabled: false
+  enabled: true
   id: ru_7271bd7d-2adf-4935-ba31-b0a68f0db413
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_7271bd7d-2adf-4935-ba31-b0a68f0db413
   revision_create_time: '2025-04-18T00:42:48.529679Z'
@@ -1798,12 +1894,24 @@ rule_1714563927734:
   revision_id: v_1714563948_701279000
   run_frequency: LIVE
   type: SINGLE_EVENT
-rw_mimikatz_T1003:
+rule_1727979376900:
   alerting: false
   archive_time: null
   archived: false
-  create_time: '2024-05-23T02:12:07.075871Z'
+  create_time: '2025-07-01T11:53:30.774687Z'
   enabled: false
+  id: ru_d99ce83a-d984-48c6-b162-29907aa06e74
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_d99ce83a-d984-48c6-b162-29907aa06e74
+  revision_create_time: '2025-07-01T11:53:30.774687Z'
+  revision_id: v_1751370810_774687000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+rw_mimikatz_T1003:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2024-05-23T02:12:07.075871Z'
+  enabled: true
   id: ru_9b7e9564-b48f-4d04-80e6-2fda11a84558
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_9b7e9564-b48f-4d04-80e6-2fda11a84558
   revision_create_time: '2025-04-18T00:42:40.810495Z'
@@ -1811,11 +1919,11 @@ rw_mimikatz_T1003:
   run_frequency: LIVE
   type: SINGLE_EVENT
 rw_windows_password_spray_T1110_003:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:11.984703Z'
-  enabled: false
+  enabled: true
   id: ru_f26a8bcb-6acb-4a3c-adb0-d4bb2d9f6581
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_f26a8bcb-6acb-4a3c-adb0-d4bb2d9f6581
   revision_create_time: '2025-04-20T00:43:45.922175Z'
@@ -1823,11 +1931,11 @@ rw_windows_password_spray_T1110_003:
   run_frequency: LIVE
   type: MULTI_EVENT
 safebrowsing_process_creation_hashes_seen_more_than_7_days:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:08.089375Z'
-  enabled: false
+  enabled: true
   id: ru_f4877eba-523c-4116-b70f-3f72c4edddbf
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_f4877eba-523c-4116-b70f-3f72c4edddbf
   revision_create_time: '2025-04-20T00:43:45.831119Z'
@@ -1847,11 +1955,11 @@ ssh_bruteforce:
   run_frequency: HOURLY
   type: MULTI_EVENT
 suspicious_asn:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.886655Z'
-  enabled: false
+  enabled: true
   id: ru_674c9de3-449c-4df2-9a75-846a8b4f9fa8
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_674c9de3-449c-4df2-9a75-846a8b4f9fa8
   revision_create_time: '2025-04-18T00:42:49.108031Z'
@@ -1859,11 +1967,11 @@ suspicious_asn:
   run_frequency: LIVE
   type: SINGLE_EVENT
 suspicious_download_office:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:09.821487Z'
-  enabled: false
+  enabled: true
   id: ru_e553aa12-4759-482b-90b0-819cbd3e082c
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_e553aa12-4759-482b-90b0-819cbd3e082c
   revision_create_time: '2025-04-18T00:42:45.307887Z'
@@ -1883,11 +1991,11 @@ suspicious_powershell_download_execution:
   run_frequency: LIVE
   type: SINGLE_EVENT
 suspicious_unusual_location_lnk_file:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:05.915839Z'
-  enabled: false
+  enabled: true
   id: ru_0a97c827-ee7b-420e-b76f-119cb704b4ac
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_0a97c827-ee7b-420e-b76f-119cb704b4ac
   revision_create_time: '2025-04-20T00:43:45.226495Z'
@@ -1906,12 +2014,24 @@ test2:
   revision_id: v_1747096277_868063000
   run_frequency: LIVE
   type: MULTI_EVENT
-vt_relationships_file_contacts_domain:
+ttp_chrome_admin_password_reused:
   alerting: false
   archive_time: null
   archived: false
-  create_time: '2024-05-23T02:12:09.455343Z'
+  create_time: '2025-07-01T11:53:30.394623Z'
   enabled: false
+  id: ru_332ddb18-f3c1-4898-810f-e361f08b7540
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_332ddb18-f3c1-4898-810f-e361f08b7540
+  revision_create_time: '2025-07-01T11:53:30.394623Z'
+  revision_id: v_1751370810_394623000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
+vt_relationships_file_contacts_domain:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2024-05-23T02:12:09.455343Z'
+  enabled: true
   id: ru_78ef007d-ecc1-4a7e-8fad-67b6071cb1cd
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_78ef007d-ecc1-4a7e-8fad-67b6071cb1cd
   revision_create_time: '2025-04-18T00:42:45.493551Z'
@@ -1919,11 +2039,11 @@ vt_relationships_file_contacts_domain:
   run_frequency: LIVE
   type: MULTI_EVENT
 vt_relationships_file_contacts_ip:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:14.836831Z'
-  enabled: false
+  enabled: true
   id: ru_bd6a47f8-5e77-43b0-a92b-1bee3fc5b4cb
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_bd6a47f8-5e77-43b0-a92b-1bee3fc5b4cb
   revision_create_time: '2025-04-18T00:42:46.236351Z'
@@ -1931,11 +2051,11 @@ vt_relationships_file_contacts_ip:
   run_frequency: LIVE
   type: MULTI_EVENT
 vt_relationships_file_contacts_tor_ip:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:13.850479Z'
-  enabled: false
+  enabled: true
   id: ru_9bad07e0-c9f5-4f00-a398-4af949f3c89f
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_9bad07e0-c9f5-4f00-a398-4af949f3c89f
   revision_create_time: '2025-04-18T00:42:44.747103Z'
@@ -1943,11 +2063,11 @@ vt_relationships_file_contacts_tor_ip:
   run_frequency: LIVE
   type: MULTI_EVENT
 vt_relationships_file_downloaded_from_ip:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.490927Z'
-  enabled: false
+  enabled: true
   id: ru_7d443bba-a524-462e-8b6b-40a8537e954d
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_7d443bba-a524-462e-8b6b-40a8537e954d
   revision_create_time: '2025-04-18T00:42:46.929455Z'
@@ -1955,11 +2075,11 @@ vt_relationships_file_downloaded_from_ip:
   run_frequency: LIVE
   type: MULTI_EVENT
 vt_relationships_file_downloaded_from_url:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:10.670207Z'
-  enabled: false
+  enabled: true
   id: ru_ea4ee544-fec1-48a9-b7d3-f3a7a43e6d42
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_ea4ee544-fec1-48a9-b7d3-f3a7a43e6d42
   revision_create_time: '2025-04-18T00:42:47.557743Z'
@@ -1967,11 +2087,11 @@ vt_relationships_file_downloaded_from_url:
   run_frequency: LIVE
   type: MULTI_EVENT
 vt_relationships_file_executes_file:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.506863Z'
-  enabled: false
+  enabled: true
   id: ru_84e7c2cf-84ba-451d-9f8f-b5d6e29e90c1
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_84e7c2cf-84ba-451d-9f8f-b5d6e29e90c1
   revision_create_time: '2025-04-18T00:42:39.821615Z'
@@ -1979,11 +2099,11 @@ vt_relationships_file_executes_file:
   run_frequency: LIVE
   type: MULTI_EVENT
 whoami_execution:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:13.684959Z'
-  enabled: false
+  enabled: true
   id: ru_79bfc69e-078d-470e-ad1c-1f6f8e006143
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_79bfc69e-078d-470e-ad1c-1f6f8e006143
   revision_create_time: '2025-04-18T00:42:40.702671Z'
@@ -2003,11 +2123,11 @@ whois_dns_query_to_typosquatting_domain:
   run_frequency: HOURLY
   type: MULTI_EVENT
 whois_expired_domain_accessed:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:02.984719Z'
-  enabled: false
+  enabled: true
   id: ru_14b58b65-f3d6-40c1-b8b9-bc20eab59f9f
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_14b58b65-f3d6-40c1-b8b9-bc20eab59f9f
   revision_create_time: '2025-04-18T00:42:46.639279Z'
@@ -2015,11 +2135,11 @@ whois_expired_domain_accessed:
   run_frequency: HOURLY
   type: MULTI_EVENT
 whois_expired_domain_executable_downloaded:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:06.629343Z'
-  enabled: false
+  enabled: true
   id: ru_11c56e80-3cce-4892-965c-54ee5dfe2e4d
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_11c56e80-3cce-4892-965c-54ee5dfe2e4d
   revision_create_time: '2025-04-18T00:42:48.439775Z'
@@ -2063,11 +2183,11 @@ win_repeatedAuthFailure_thenSuccess:
   run_frequency: LIVE
   type: MULTI_EVENT
 win_repeatedAuthFailure_thenSuccess_T1110_001:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:15.007855Z'
-  enabled: false
+  enabled: true
   id: ru_8d9b73e3-1028-4298-961b-c41c33e364fa
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_8d9b73e3-1028-4298-961b-c41c33e364fa
   revision_create_time: '2025-04-18T00:42:47.656719Z'
@@ -2111,11 +2231,11 @@ win_tempAccountAbuse:
   run_frequency: HOURLY
   type: MULTI_EVENT
 windows_event_log_cleared:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:02.483039Z'
-  enabled: false
+  enabled: true
   id: ru_65830a68-fcc7-47f2-b79e-cc38dbe7c9e5
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_65830a68-fcc7-47f2-b79e-cc38dbe7c9e5
   revision_create_time: '2025-04-18T00:42:42.025023Z'
@@ -2123,11 +2243,11 @@ windows_event_log_cleared:
   run_frequency: LIVE
   type: SINGLE_EVENT
 wmic_ntds_dit_T1003_003_cisa_report:
-  alerting: false
+  alerting: true
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:11.879855Z'
-  enabled: false
+  enabled: true
   id: ru_72295b21-062e-4218-9767-daf6e00cafe2
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_72295b21-062e-4218-9767-daf6e00cafe2
   revision_create_time: '2025-04-18T00:42:45.873583Z'
