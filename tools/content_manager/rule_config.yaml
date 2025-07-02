@@ -819,7 +819,7 @@ domain_prevalence:
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:05.448399Z'
-  enabled: false
+  enabled: true
   id: ru_030985d9-cc57-48e7-aa32-b4027ca66b91
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_030985d9-cc57-48e7-aa32-b4027ca66b91
   revision_create_time: '2025-04-20T00:43:45.650863Z'
@@ -939,7 +939,7 @@ hash_prevalence:
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:05.709375Z'
-  enabled: false
+  enabled: true
   id: ru_0b843a0b-045c-4414-bfc6-7e6f048ae2c3
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_0b843a0b-045c-4414-bfc6-7e6f048ae2c3
   revision_create_time: '2025-04-18T00:42:49.288031Z'
@@ -1059,7 +1059,7 @@ ip_target_prevalence:
   archive_time: null
   archived: false
   create_time: '2024-05-23T02:12:12.743743Z'
-  enabled: false
+  enabled: true
   id: ru_3955ce61-2ef0-433e-a15f-bb958c7968de
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_3955ce61-2ef0-433e-a15f-bb958c7968de
   revision_create_time: '2025-04-18T00:42:47.218063Z'
