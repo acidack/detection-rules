@@ -17,7 +17,7 @@ permissions:
 
 defaults:  
   run:
-    working-directory: ./detection-as-code
+    working-directory: ./tools/content_manager
     
 jobs:
   update-remote-content:
