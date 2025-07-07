@@ -1,0 +1,20 @@
+rule Cobalt_Strike_PowerShell_Download_Execute {
+  meta:
+    author = "Cline"
+    description = "Detects suspicious PowerShell execution patterns often associated with Cobalt Strike, involving downloading and executing scripts in memory."
+    severity = "HIGH"
+    priority = "HIGH"
+    mitre_attack_tactic = "Execution"
+    mitre_attack_technique = "T1059.001"
+
+  events:
+    $p.metadata.event_type = "PROCESS_LAUNCH"
+    $p.principal.process.file.full_path = /powershell.exe$/
+    // Detects common in-memory download and execution patterns
+    $p.principal.process.command_line = /New-Object System.Net.WebClient/ and
+    $p.principal.process.command_line = /DownloadString/ and
+    $p.principal.process.command_line = /IEX/
+
+  condition:
+    $p
+}

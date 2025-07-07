@@ -1,4 +1,4 @@
-rule okta_new_api_token_created {
+rule okta_new_api_token_created_test {
 
   meta:
     author = "Google Cloud Security"
@@ -14,7 +14,6 @@ rule okta_new_api_token_created {
     priority = "Medium"
 
   events:
-    $token.metadata.base_labels.namespaces = "LogStory"
     $token.metadata.base_labels.namespaces = "LogStory"
     $token.metadata.product_name = "Okta"
     $token.metadata.vendor_name = "Okta"

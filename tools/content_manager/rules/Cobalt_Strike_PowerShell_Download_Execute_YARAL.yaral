@@ -1,0 +1,31 @@
+rule Cobalt_Strike_PowerShell_Download_Execute_YARAL {
+  meta:
+    author = "Cline"
+    description = "Detects suspicious PowerShell execution patterns often associated with Cobalt Strike, involving downloading and executing scripts in memory."
+    severity = "HIGH"
+    priority = "HIGH"
+    mitre_attack_tactic = "Execution"
+    mitre_attack_technique = "T1059.001"
+
+  events:
+    $p.metadata.event_type = "PROCESS_LAUNCH"
+    re.regex($p.target.process.file.full_path, `powershell\\.exe$`) nocase
+    re.regex($p.target.process.command_line, `(?i)(New-Object System.Net.WebClient)`)
+    re.regex($p.target.process.command_line, `(?i)(DownloadString)`)
+    re.regex($p.target.process.command_line, `(?i)(IEX)`)
+    $p.principal.hostname = $hostname
+
+  match:
+    $hostname over 10m
+
+  outcome:
+    $risk_score = max(85)
+    $mitre_attack_tactic = "Execution"
+    $mitre_attack_technique = "Command and Scripting Interpreter: PowerShell"
+    $mitre_attack_technique_id = "T1059.001"
+    $event_count = count_distinct($p.metadata.id)
+    $command_lines = array_distinct($p.target.process.command_line)
+
+  condition:
+    $p
+}

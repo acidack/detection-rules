@@ -1,0 +1,56 @@
+rule suspicious_powershell_download_execution {
+
+  meta:
+    author = "Cline (AI)"
+    description = "Detects suspicious PowerShell execution involving download and execution of code using Invoke-Expression and common download cmdlets."
+    mitre_attack_tactic = "Execution"
+    mitre_attack_technique = "Command and Scripting Interpreter: PowerShell"
+    mitre_attack_url = "https://attack.mitre.org/techniques/T1059/001/"
+    mitre_attack_version = "v13.1"
+    type = "detection"  // Or "hunt" if preferred for less common patterns
+    platform = "Windows"
+    data_source = "microsoft sysmon, microsoft windows events"
+    severity = "High"
+    priority = "High"
+
+  events:
+    // Event type for process launch
+    $ps.metadata.event_type = "PROCESS_LAUNCH"
+    // Match PowerShell executable
+    re.regex($ps.target.process.file.full_path, `powershell\.exe$`) nocase
+    // Match Invoke-Expression or iex
+    re.regex($ps.target.process.command_line, `(?i)(Invoke-Expression|iex)`)
+    // Match common download methods
+    re.regex($ps.target.process.command_line, `(?i)(DownloadString|DownloadFile|Invoke-WebRequest|Net\.WebClient|iwr)`)
+    // Capture the full command line for review
+    $full_command_line = $ps.target.process.command_line
+    // Capture hostname
+    $ps.principal.hostname = $hostname
+
+  match:
+    $hostname over 10m  // Adjust time window as needed
+
+  outcome:
+    $risk_score = max(75) // Assign a risk score (0-100)
+    $mitre_attack_tactic = "Execution"
+    $mitre_attack_technique = "Command and Scripting Interpreter: PowerShell"
+    $mitre_attack_technique_id = "T1059.001"
+    $event_count = count_distinct($ps.metadata.id)
+    $command_lines = array_distinct($full_command_line)
+
+    // Contextual information for alert
+    $principal_hostname = array_distinct($ps.principal.hostname)
+    $principal_user_userid = array_distinct($ps.principal.user.userid)
+    $principal_process_pid = array_distinct($ps.principal.process.pid)
+    $principal_process_command_line = array_distinct($ps.principal.process.command_line)
+    $principal_process_file_sha256 = array_distinct($ps.principal.process.file.sha256)
+    $principal_process_file_full_path = array_distinct($ps.principal.process.file.full_path)
+
+    $target_process_pid = array_distinct($ps.target.process.pid)
+    $target_process_command_line = array_distinct($ps.target.process.command_line) // This is the primary field of interest
+    $target_process_file_sha256 = array_distinct($ps.target.process.file.sha256)
+    $target_process_file_full_path = array_distinct($ps.target.process.file.full_path)
+
+  condition:
+    $ps
+}
