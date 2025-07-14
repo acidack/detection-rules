@@ -1,0 +1,15 @@
+rule Ursnif_Renamed_Rundll32_Execution {
+  meta:
+    author = "Cline"
+    description = "Detects a renamed rundll32.exe executing a .db file, a known Ursnif TTP."
+    severity = "HIGH"
+    priority = "HIGH"
+
+  events:
+    $process.metadata.event_type = "PROCESS_LAUNCH"
+    $process.principal.process.file.full_path = /\\123\.com$/
+    $process.principal.process.command_line = /itsIt\.db,DllRegisterServer/
+
+  condition:
+    $process
+}

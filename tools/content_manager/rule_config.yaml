@@ -34,6 +34,18 @@ Cobalt_Strike_PowerShell_Download_Execute_YARAL:
   revision_id: v_1751287589_213215000
   run_frequency: LIVE
   type: SINGLE_EVENT
+Ursnif_Renamed_Rundll32_Execution:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-14T06:23:03.751407Z'
+  enabled: false
+  id: ru_43c5e8ad-e0ac-4843-ac20-5c822c14e185
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_43c5e8ad-e0ac-4843-ac20-5c822c14e185
+  revision_create_time: '2025-07-14T06:23:03.751407Z'
+  revision_id: v_1752474183_751407000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 adfs_db_suspicious_named_pipe_connection:
   alerting: true
   archive_time: null
