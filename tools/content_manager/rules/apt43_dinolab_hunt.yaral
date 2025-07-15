@@ -1,0 +1,14 @@
+rule apt43_dinolab_hunt {
+  meta:
+    author = "Cline - Detection Engineer"
+    description = "Detects the presence of the DINOLAB malware, associated with APT43, by looking for specific strings in process launch events."
+    severity = "HIGH"
+    priority = "HIGH"
+
+  events:
+    $process.metadata.event_type = "PROCESS_LAUNCH"
+    $process.principal.process.command_line = /http:\/\/ksi\/|__1111__|certutil -f -decode/
+
+  condition:
+    $process
+}

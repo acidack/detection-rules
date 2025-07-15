@@ -70,6 +70,18 @@ ag_ioc_sha256_hash_vt_basic:
   revision_id: v_1748567069_947551000
   run_frequency: LIVE
   type: MULTI_EVENT
+apt43_dinolab_hunt:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-15T02:32:32.152511Z'
+  enabled: false
+  id: ru_8e1190f9-ea9a-494a-886a-3a6635c7c804
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_8e1190f9-ea9a-494a-886a-3a6635c7c804
+  revision_create_time: '2025-07-15T02:32:32.152511Z'
+  revision_id: v_1752546752_152511000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 aws_account_leaving_or_removed_from_organization:
   alerting: false
   archive_time: null
