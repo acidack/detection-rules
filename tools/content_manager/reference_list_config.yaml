@@ -12,3 +12,11 @@ example_list_1:
   rule_associations_count: null
   rules: null
   syntax_type: REFERENCE_LIST_SYNTAX_TYPE_PLAIN_TEXT_STRING
+hostnames:
+  description: hostnam list
+  resource_name: projects/malachite-ace-373104/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/referenceLists/hostnames
+  revision_create_time: '2025-07-28T03:22:11.487983Z'
+  rule_associations_count: 1
+  rules:
+  - projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_67f98d43-fe30-463f-8f36-823bc9ef1c1e
+  syntax_type: REFERENCE_LIST_SYNTAX_TYPE_PLAIN_TEXT_STRING

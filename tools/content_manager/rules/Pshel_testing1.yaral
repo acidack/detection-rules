@@ -1,0 +1,14 @@
+rule Pshel_testing1 {
+meta:
+  author = "Alain Le Moeligou"
+  description = "Detect any events where the target file path matches the regex /gg_dns.+ps1/" 
+  severity = "Medium"
+  events:
+  $e.target.process.file.full_path = /NtLmSsp/ NOCASE
+outcome:
+  $event_type = $e.metadata.event_type
+  $log_type = $e.metadata.log_type
+  $hostname = $e.principal.hostname
+condition:
+  $e
+}

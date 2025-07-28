@@ -34,6 +34,18 @@ Cobalt_Strike_PowerShell_Download_Execute_YARAL:
   revision_id: v_1751287589_213215000
   run_frequency: LIVE
   type: SINGLE_EVENT
+Pshel_testing1:
+  alerting: false
+  archive_time: null
+  archived: false
+  create_time: '2025-07-28T02:53:00.022431Z'
+  enabled: true
+  id: ru_0cad1e7b-da5d-4f60-a945-49a8dcbf35ec
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_0cad1e7b-da5d-4f60-a945-49a8dcbf35ec
+  revision_create_time: '2025-07-28T02:55:16.163263Z'
+  revision_id: v_1753671316_163263000
+  run_frequency: LIVE
+  type: SINGLE_EVENT
 Ursnif_Renamed_Rundll32_Execution:
   alerting: false
   archive_time: null
@@ -670,6 +682,18 @@ aws_user_creates_permenant_access_key:
   revision_id: v_1745109824_833887000
   run_frequency: LIVE
   type: SINGLE_EVENT
+composite_risk_aggregation:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2025-07-28T03:01:23.459679Z'
+  enabled: true
+  id: ru_67f98d43-fe30-463f-8f36-823bc9ef1c1e
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_67f98d43-fe30-463f-8f36-823bc9ef1c1e
+  revision_create_time: '2025-07-28T04:51:31.027215Z'
+  revision_id: v_1753678291_027215000
+  run_frequency: HOURLY
+  type: MULTI_EVENT
 demo_repeatedAuthFailure_thenSuccess:
   alerting: true
   archive_time: null

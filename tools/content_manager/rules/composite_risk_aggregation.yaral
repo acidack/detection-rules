@@ -1,0 +1,20 @@
+rule composite_risk_aggregation {
+  meta:
+    rule_name = "Risk Aggregation Composite"
+    author = "Google Cloud Security"
+    description = "Composite detection that aggregates risk of a user over 48 hours"
+    severity = "High"
+
+events:
+   $detect_prod1.detection.detection.rule_id = "ru_0cad1e7b-da5d-4f60-a945-49a8dcbf35ec" //producer_recon_environment_enumeration_active_directory_cisa_report
+   $detect_prod1.detection.collection_elements.references.event.principal.asset.hostname = $hostname
+   //$detect_prod1.detection.detection.detection_fields["hostname"] = $hostname
+   $e.principal.hostname in %hostnames
+   $e.principal.hostname = $hostname
+ match:
+   $hostname over 1h
+ outcome:
+   $risk_score = 60
+ condition:
+   $detect_prod1 and $e
+}
