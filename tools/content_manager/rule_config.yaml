@@ -834,8 +834,8 @@ demoverse_user_download_executable_from_macro:
   enabled: true
   id: ru_03b713c1-dbc0-450d-b210-0b458ca64de2
   resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_03b713c1-dbc0-450d-b210-0b458ca64de2
-  revision_create_time: '2025-03-18T00:24:17.674943Z'
-  revision_id: v_1742257457_674943000
+  revision_create_time: '2025-08-01T12:08:56.646575Z'
+  revision_id: v_1754050136_646575000
   run_frequency: LIVE
   type: MULTI_EVENT
 demoverse_workspace_MalwareDownload:
