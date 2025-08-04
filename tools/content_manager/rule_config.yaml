@@ -1990,6 +1990,30 @@ safebrowsing_process_creation_hashes_seen_more_than_7_days:
   revision_id: v_1745109825_831119000
   run_frequency: HOURLY
   type: MULTI_EVENT
+shm_using_hostname:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2025-08-04T02:35:12.699807Z'
+  enabled: true
+  id: ru_54ffc694-ea07-41fe-b6c3-7a38ceea12fe
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_54ffc694-ea07-41fe-b6c3-7a38ceea12fe
+  revision_create_time: '2025-08-04T02:35:12.699807Z'
+  revision_id: v_1754274912_699807000
+  run_frequency: LIVE
+  type: MULTI_EVENT
+shm_using_ingestion_label:
+  alerting: true
+  archive_time: null
+  archived: false
+  create_time: '2025-08-04T02:35:36.861935Z'
+  enabled: true
+  id: ru_783b1fea-c58b-4a76-9e61-11202a2c9436
+  resource_name: projects/304199104626/locations/australia-southeast1/instances/bc592657-8692-4184-a40d-6c12ff58a350/rules/ru_783b1fea-c58b-4a76-9e61-11202a2c9436
+  revision_create_time: '2025-08-04T02:35:36.861935Z'
+  revision_id: v_1754274936_861935000
+  run_frequency: LIVE
+  type: MULTI_EVENT
 ssh_bruteforce:
   alerting: false
   archive_time: null

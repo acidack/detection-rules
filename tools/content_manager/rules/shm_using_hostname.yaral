@@ -1,0 +1,15 @@
+rule shm_using_hostname {
+ meta:
+
+ events:
+   $event.metadata.event_timestamp.seconds > timestamp.current_seconds() - 1200
+   // $identifier_hash = hash.sha256(strings.concat($event.principal.ip[0], $event.principal.hostname, $event.principal.mac[0]))
+   $silent_hostname = $event.principal.hostname
+ match:
+   $silent_hostname over 10m
+ outcome:
+   $max_event_time = max($event.metadata.event_timestamp.seconds)
+   $max_diff = timestamp.current_seconds() - $max_event_time
+ condition:
+   $event and $max_diff > 600
+}

@@ -1,0 +1,17 @@
+rule shm_using_ingestion_label {
+ meta:
+
+ events:
+   $event.metadata.event_timestamp.seconds > timestamp.current_seconds() - 1200
+   $event.metadata.ingestion_labels.key = "ingestion_source"
+   $silent_ingestion_source = $event.metadata.ingestion_labels.value
+ match:
+   $silent_ingestion_source over 20m
+ outcome:
+   $max_time_seconds = max($event.metadata.event_timestamp.seconds)
+   $max_diff_seconds = timestamp.current_seconds() - $max_time_seconds
+   $max_timestamp = timestamp.get_timestamp($max_time_seconds, "SECOND", "Asia/Calcutta")
+   $current_timestamp = timestamp.get_timestamp(timestamp.current_seconds(), "SECOND", "Asia/Calcutta")
+ condition:
+   $event and $max_diff_seconds > 600
+}
